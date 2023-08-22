@@ -10,5 +10,8 @@
     "market"
   ],
   "author": "Najot Talim Jamoasi",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.0.1"
+  }
 }
