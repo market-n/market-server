@@ -1,5 +1,6 @@
 const express = require("express");
-const config = require("./shared/config")
+const config = require("./shared/config");
+const db = require("./db");
 const app = express();
 
 // DATABAZAGA ULANISH 
