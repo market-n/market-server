@@ -20,6 +20,10 @@ const AdminSchema = new mongoose.Schema(
       unique: true,
     },
     password: type,
+    is_deleted: {
+      type: mongoose.SchemaTypes.Boolean,
+      default: false,
+    },
   },
   {
     versionKey: false,
