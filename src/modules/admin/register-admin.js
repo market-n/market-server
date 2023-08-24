@@ -3,7 +3,6 @@ const Admin = require("./Admin");
 const { hashSync } = require("bcryptjs");
 
 const registerAdmin = async ({ body }) => {
-  const admin = await Admin.create(body);
   const { username, password, ...data } = body;
 
   const existed = await Admin.findOne({ username });
@@ -20,6 +19,11 @@ const registerAdmin = async ({ body }) => {
 
   const hashedPassword = hashSync(password, 10);
 
+  const admin = await Admin.create({
+    ...data,
+    username,
+    password: hashedPassword,
+  });
   return admin;
 };
 module.exports = registerAdmin;
