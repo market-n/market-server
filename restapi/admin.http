@@ -1,0 +1,11 @@
+### REGISTER ADMIN
+POST http://localhost:5000/register/admin
+Content-Type: application/json
+
+{
+  "first_name": "Sherozbek",
+  "last_name": "Baxtiyorov",
+  "image": "sherozbek.png",
+  "username": "sherozbek.17",
+  "password": "1234"
+}
