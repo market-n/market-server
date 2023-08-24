@@ -3,8 +3,6 @@ const config = require("./shared/config");
 const cors = require("cors");
 const db = require("./db");
 const app = express();
-// middleware 
-app.use(express.json())
 
 // import handleError
 const handleError = require("./shared/errors/handle");
