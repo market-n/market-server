@@ -11,9 +11,9 @@ const registerAdmin = require("./register-admin");
 const register_admin = async (req, res, next) => {
   try {
     let result = await registerAdmin({ body: req.body });
-    res.status(201).json({data:result})
+    res.status(201).json({ data: result });
   } catch (error) {
     next(error);
   }
 };
-module.exports = {register_admin}
+module.exports = { register_admin };
