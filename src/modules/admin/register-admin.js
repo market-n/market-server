@@ -1,4 +1,6 @@
+const { BadRequestError } = require("../../shared/errors");
 const Admin = require("./Admin");
+const { hashSync } = require("bcryptjs");
 
 const registerAdmin = async ({ body }) => {
   const admin = await Admin.create(body);
@@ -15,6 +17,9 @@ const registerAdmin = async ({ body }) => {
     console.log(body.role != "admin");
     throw new BadRequestError("This role Not Found!");
   }
+
+  const hashedPassword = hashSync(password, 10);
+
   return admin;
 };
 module.exports = registerAdmin;
