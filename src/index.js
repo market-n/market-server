@@ -1,7 +1,7 @@
 const express = require("express");
-
+const config = require("./shared/config")
 const app = express();
 
-app.listen(5000,() =>{
-    console.log("SERVER HAS BEEN STARTED ON PORT:5000");
+app.listen(config.port,() =>{
+    console.log(`SERVER HAS BEEN STARTED ON PORT:${config.port}`)
 })
