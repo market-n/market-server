@@ -9,3 +9,13 @@ Content-Type: application/json
   "username": "sherozbek.17",
   "password": "1234"
 }
+
+
+### Login ADMIN
+POST http://localhost:5000/login/admin
+Content-Type: application/json
+
+{
+  "username": "sherozbek.17",
+  "password": "1234"
+}
