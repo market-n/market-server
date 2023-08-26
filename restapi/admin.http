@@ -37,3 +37,18 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjY0ZTc2
 ### UnDelete Admin
 DELETE http://localhost:5000/admin/un/64e99e98bf3f2768d5517009
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjY0ZTc2NGIwZWIyMWUwYjk5NTI3YjkxYyIsInJvbGUiOiJzdXBlcl9hZG1pbiJ9LCJpYXQiOjE2OTMwNTQyNTQsImV4cCI6MTY5MzE0MDY1NH0.Zope1NVgsslRWtl6xWSFrtSeDf4gqOubL-9X7LYo-l8
+
+
+
+### EDIT ADMIN
+PATCH  http://localhost:5000/admin/64e99e98bf3f2768d5517009
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjY0ZTc2NGIwZWIyMWUwYjk5NTI3YjkxYyIsInJvbGUiOiJzdXBlcl9hZG1pbiJ9LCJpYXQiOjE2OTMwNTQyNTQsImV4cCI6MTY5MzE0MDY1NH0.Zope1NVgsslRWtl6xWSFrtSeDf4gqOubL-9X7LYo-l8
+Content-Type: application/json
+
+{
+  "first_name": "Hamkor eDIT",
+  "last_name": "Bank eDIT",
+  "image": "logohamkor.jpg",
+  "username": "hamkor.bank",
+  "password": "555"
+}
