@@ -1,6 +1,7 @@
 const express = require("express");
 const addAdmin = require("./add-admin");
 const loginAdmin = require("./login-admin");
+const listAdmin = require("./list-admins");
 
 /**
  *
@@ -43,6 +44,8 @@ const login_admin = async (req, res, next) => {
 
 const list_admin = async (req, res, next) => {
   try {
+    let result = await listAdmin();
+    res.status(200).json({ data: result });
   } catch (error) {
     next(error);
   }
