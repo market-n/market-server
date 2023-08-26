@@ -19,7 +19,12 @@ const loginAdmin = async ({ body }) => {
     throw new ForbiddenError("Password Incorrect!");
   }
 
-  const token = jwt.sign({ admin: { id: existing.id } }, config.jwt.secret, {
+  let decode = {
+    id: existing.id,
+    role: existing.role,
+  };
+
+  const token = jwt.sign({ admin: decode }, config.jwt.secret, {
     expiresIn: config.jwt.expirec_in,
   });
 
