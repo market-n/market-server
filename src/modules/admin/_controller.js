@@ -1,5 +1,5 @@
 const express = require("express");
-const registerAdmin = require("./register-admin");
+const addAdmin = require("./add-admin");
 const loginAdmin = require("./login-admin");
 
 /**
@@ -9,9 +9,9 @@ const loginAdmin = require("./login-admin");
  * @param {express.NextFunction} next
  */
 
-const register_admin = async (req, res, next) => {
+const add_admin = async (req, res, next) => {
   try {
-    let result = await registerAdmin({ body: req.body });
+    let result = await addAdmin({ body: req.body });
     res.status(201).json({ data: result });
   } catch (error) {
     next(error);
@@ -34,4 +34,4 @@ const login_admin = async (req, res, next) => {
   }
 };
 
-module.exports = { register_admin, login_admin };
+module.exports = { add_admin, login_admin };

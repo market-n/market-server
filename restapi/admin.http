@@ -1,5 +1,6 @@
 ### REGISTER ADMIN
 POST http://localhost:5000/register/admin
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjY0ZTc2NGIwZWIyMWUwYjk5NTI3YjkxYyJ9LCJpYXQiOjE2OTMwMzA5NDgsImV4cCI6MTY5MzExNzM0OH0.rFJzatF2cteuBaSmCCqBr7WU9nB3lpNNQ87J0-13i7c
 Content-Type: application/json
 
 {
