@@ -17,6 +17,14 @@ const swagger_js =  {
     "schemes": [
       "http"
     ],
+    "securityDefinitions":{
+        "apiKeyAuth": {
+        "type": 'apiKey',
+        "in": 'header',
+        "name": 'Authorization',
+        "description": 'Jwt token'
+        }
+    },
     "consumes": [
       "application/json"
     ],
@@ -26,21 +34,10 @@ const swagger_js =  {
     "paths": {
       "/admin": {
         "get": {
-          "tags": [],
+          "tags": ["Market api doc"],
           "produces": [
             "application/json"
           ],
-          "description": "Endpoint to sign in a specific user",
-          "parameters": [
-            {
-              "name": "obj",
-              "in": "body",
-              "description": "User information.",
-              "required": true,
-              "schema": {
-                "$ref": "#/definitions/AddUser"
-              }
-            }],
           "responses": {
             "200": {
               "description": "OK"
@@ -50,7 +47,7 @@ const swagger_js =  {
       },
       "/register/admin": {
         "post": {
-          "tags": [],
+          "tags": ["Market api doc"],
           "description": "Endpoint to sign in a specific user",
           "parameters": [
             {
@@ -71,7 +68,7 @@ const swagger_js =  {
       },
       "/login/admin": {
         "post": {
-          "tags": [],
+          "tags": ["Market api doc"],
           "description": "Endpoint to sigup in a specific user",
           "parameters": [
             {
@@ -104,7 +101,7 @@ const swagger_js =  {
             "example": "Marie Doe"
           },
           "image": {
-            "type": "file",
+            "type": "string",
             "example": "Jhon_Doe.png"
           },
           "role":{
