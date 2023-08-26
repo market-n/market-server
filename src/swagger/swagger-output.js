@@ -1,21 +1,30 @@
-{
+const config =  require("../shared/config")
+const swagger_js =  {
     "swagger": "2.0",
     "info": {
       "version": "1.0.0",
       "title": "Servermarket api",
       "description": "Documentation yoq"
     },
-    "host": "localhost:7000",
+    "host": `localhost:${config.port}`,
     "basePath": "/",
     "tags": [
       {
-        "name": "User",
+        "name": "Market api doc",
         "description": "Endpoints"
       }
     ],
     "schemes": [
       "http"
     ],
+    "securityDefinitions":{
+        "apiKeyAuth": {
+        "type": 'apiKey',
+        "in": 'header',
+        "name": 'Authorization',
+        "description": 'Jwt token'
+        }
+    },
     "consumes": [
       "application/json"
     ],
@@ -25,21 +34,10 @@
     "paths": {
       "/admin": {
         "get": {
-          "tags": [],
+          "tags": ["Market api doc"],
           "produces": [
             "application/json"
           ],
-          "description": "Endpoint to sign in a specific user",
-          "parameters": [
-            {
-              "name": "obj",
-              "in": "body",
-              "description": "User information.",
-              "required": true,
-              "schema": {
-                "$ref": "#/definitions/AddUser"
-              }
-            }],
           "responses": {
             "200": {
               "description": "OK"
@@ -49,7 +47,7 @@
       },
       "/register/admin": {
         "post": {
-          "tags": [],
+          "tags": ["Market api doc"],
           "description": "Endpoint to sign in a specific user",
           "parameters": [
             {
@@ -70,7 +68,7 @@
       },
       "/login/admin": {
         "post": {
-          "tags": [],
+          "tags": ["Market api doc"],
           "description": "Endpoint to sigup in a specific user",
           "parameters": [
             {
@@ -103,7 +101,7 @@
             "example": "Marie Doe"
           },
           "image": {
-            "type": "image",
+            "type": "string",
             "example": "Jhon_Doe.png"
           },
           "role":{
@@ -151,3 +149,5 @@
       }
     }
   }
+
+module.exports = swagger_js
