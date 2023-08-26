@@ -96,6 +96,8 @@ const remove_admin = async (req, res, next) => {
 
 const unremove_admin = async (req, res, next) => {
   try {
+    let result = await unremoveAdmin({ params: req.params });
+    res.status(200).json({ data: result });
   } catch (error) {
     next(error);
   }
