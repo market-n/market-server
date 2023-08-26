@@ -2,10 +2,14 @@ const express = require("express");
 const config = require("./shared/config");
 const cors = require("cors");
 const db = require("./db");
+const path = require("path");
 const app = express();
 
 // import handleError
 const handleError = require("./shared/errors/handle");
+
+// public fayl'ni public qilish yo'li
+app.use("/files", express.static(path.join(__dirname, "public")));
 
 // middleware
 app.use(cors());
