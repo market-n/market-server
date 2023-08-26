@@ -1,6 +1,8 @@
 const express = require("express");
 const config = require("./shared/config");
 const cors = require("cors");
+const swaggerUi = require('swagger-ui-express')
+const swaggerFile = require('../src/swagger/swagger-output.json')
 const db = require("./db");
 const path = require("path");
 const app = express();
@@ -26,6 +28,7 @@ db();
 
 // Middleware Error
 app.use(handleError);
+app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 
 app.listen(config.port, () => {
   console.log(`SERVER HAS BEEN STARTED ON PORT:${config.port}`);
