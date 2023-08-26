@@ -1,15 +1,16 @@
-{
+const config =  require("../shared/config")
+const swagger_js =  {
     "swagger": "2.0",
     "info": {
       "version": "1.0.0",
       "title": "Servermarket api",
       "description": "Documentation yoq"
     },
-    "host": "localhost:7000",
+    "host": `localhost:${config.port}`,
     "basePath": "/",
     "tags": [
       {
-        "name": "User",
+        "name": "Market api doc",
         "description": "Endpoints"
       }
     ],
@@ -103,7 +104,7 @@
             "example": "Marie Doe"
           },
           "image": {
-            "type": "image",
+            "type": "file",
             "example": "Jhon_Doe.png"
           },
           "role":{
@@ -151,3 +152,5 @@
       }
     }
   }
+
+module.exports = swagger_js
