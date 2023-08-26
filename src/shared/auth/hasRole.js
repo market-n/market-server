@@ -9,6 +9,13 @@ const { ForbiddenError } = require("../errors");
  */
 
 const hasRole = (roles) => {
+  return async (req, res, next) => {
+    try {
+      next();
+    } catch (error) {
+      next(error);
+    }
+  };
 };
 
 module.exports = hasRole;
