@@ -8,6 +8,9 @@ const app = express();
 // import handleError
 const handleError = require("./shared/errors/handle");
 
+// public fayl'ni public qilish yo'li
+app.use("/files", express.static(path.join(__dirname, "public")));
+
 // middleware
 app.use(cors());
 app.use(express.json());
