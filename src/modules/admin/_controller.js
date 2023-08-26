@@ -68,4 +68,17 @@ const show_admin = async (req, res, next) => {
   }
 };
 
-module.exports = { add_admin, login_admin, list_admin, show_admin };
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+
+const delete_admin = async (req, res, next) => {
+  try {
+  } catch (error) {
+    next(error);
+  }
+};
+module.exports = { add_admin, login_admin, list_admin, show_admin, delete_admin };
