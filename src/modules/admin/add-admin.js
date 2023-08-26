@@ -2,7 +2,7 @@ const { BadRequestError } = require("../../shared/errors");
 const Admin = require("./Admin");
 const { hashSync } = require("bcryptjs");
 
-const registerAdmin = async ({ body }) => {
+const addAdmin = async ({ body }) => {
   const { username, password, ...data } = body;
 
   const existed = await Admin.findOne({ username });
@@ -26,4 +26,4 @@ const registerAdmin = async ({ body }) => {
   });
   return admin;
 };
-module.exports = registerAdmin;
+module.exports = addAdmin;
