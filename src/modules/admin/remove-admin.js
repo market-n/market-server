@@ -9,5 +9,12 @@ const deleteAdmin = async ({ params }) => {
     throw new NotFoundError("Admin Not Found!");
   }
 
+  const deletedAdmin = await Admin.findByIdAndUpdate(
+    { _id: params.id },
+    { is_deleted: true },
+    { new: true }
+  );
+
+  return deletedAdmin;
 };
 module.exports = deleteAdmin;
