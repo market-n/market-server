@@ -4,6 +4,7 @@ const loginAdmin = require("./login-admin");
 const listAdmin = require("./list-admins");
 const showAdmin = require("./show-admin");
 const removeAdmin = require("./remove-admin");
+const unremoveAdmin = require("./unremove-admin");
 
 /**
  *
@@ -84,4 +85,19 @@ const remove_admin = async (req, res, next) => {
     next(error);
   }
 };
-module.exports = { add_admin, login_admin, list_admin, show_admin, remove_admin };
+
+
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+
+const unremove_admin = async (req, res, next) => {
+  try {
+  } catch (error) {
+    next(error);
+  }
+};
+module.exports = { add_admin, login_admin, list_admin, show_admin, remove_admin, unremove_admin };
