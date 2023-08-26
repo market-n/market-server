@@ -4,10 +4,10 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjY0ZTc2
 Content-Type: application/json
 
 {
-  "first_name": "Sherozbek",
-  "last_name": "Baxtiyorov",
-  "image": "sherozbek.png",
-  "username": "sherozbek.17",
+  "first_name": "Hamkor",
+  "last_name": "Bank",
+  "image": "logohamkor.jpg",
+  "username": "hamkor.bank",
   "password": "1234"
 }
 
@@ -20,3 +20,7 @@ Content-Type: application/json
   "username": "sherozbek.17",
   "password": "1234"
 }
+
+### List Admin
+GET http://localhost:5000/admin
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjY0ZTc2NGIwZWIyMWUwYjk5NTI3YjkxYyJ9LCJpYXQiOjE2OTMwMzA5NDgsImV4cCI6MTY5MzExNzM0OH0.rFJzatF2cteuBaSmCCqBr7WU9nB3lpNNQ87J0-13i7c
