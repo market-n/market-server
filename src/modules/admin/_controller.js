@@ -2,6 +2,7 @@ const express = require("express");
 const addAdmin = require("./add-admin");
 const loginAdmin = require("./login-admin");
 const listAdmin = require("./list-admins");
+const showAdmin = require("./show-admin");
 
 /**
  *
@@ -51,4 +52,20 @@ const list_admin = async (req, res, next) => {
   }
 };
 
-module.exports = { add_admin, login_admin, list_admin };
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+
+const show_admin = async (req, res, next) => {
+  try {
+    let result = await showAdmin({ params: req.params });
+    res.status(200).json({ data: result });
+  } catch (error) {
+    next(error);
+  }
+};
+
+module.exports = { add_admin, login_admin, list_admin, show_admin };
