@@ -3,6 +3,7 @@ const addAdmin = require("./add-admin");
 const loginAdmin = require("./login-admin");
 const listAdmin = require("./list-admins");
 const showAdmin = require("./show-admin");
+const deleteAdmin = require("./remove-admin");
 
 /**
  *
@@ -77,6 +78,8 @@ const show_admin = async (req, res, next) => {
 
 const delete_admin = async (req, res, next) => {
   try {
+    let result = await deleteAdmin({ params: req.params });
+    res.status(200).json({ data: result });
   } catch (error) {
     next(error);
   }
