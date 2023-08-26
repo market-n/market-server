@@ -1,4 +1,5 @@
 const express = require("express");
+const { UnauthorizedError } = require("../errors");
 
 /**
  *
@@ -9,6 +10,12 @@ const express = require("express");
 
 const isLoggedIn = async (req, res, next) => {
   try {
+    const token = req.headers.authorization;
+
+    if (!token) {
+      throw new UnauthorizedError("Unauthorized.");
+    }
+
     next();
   } catch (error) {
     next(new UnauthorizedError(error.message));
