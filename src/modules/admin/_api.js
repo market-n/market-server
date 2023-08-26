@@ -6,7 +6,7 @@ const {
   login_admin,
   list_admin,
   show_admin,
-  delete_admin,
+  remove_admin,
 } = require("./_controller");
 
 const router = express.Router();
@@ -15,13 +15,13 @@ const router = express.Router();
 const mRegisterAdmin = [isloggedIn];
 const mListAdmin = [isloggedIn];
 const mShowAdmin = [isloggedIn, MongoId];
-const mDeleteAdmin = [isloggedIn, MongoId];
+const mRemoveAdmin = [isloggedIn, MongoId];
 
 // Routes
 router.post("/register/admin", mRegisterAdmin, add_admin);
 router.post("/login/admin", login_admin);
 router.get("/admin", mListAdmin, list_admin);
 router.get("/admin/:id", mShowAdmin, show_admin);
-router.delete("/admin/:id", mDeleteAdmin, delete_admin);
+router.delete("/admin/:id", mRemoveAdmin, remove_admin);
 
 module.exports = router;
