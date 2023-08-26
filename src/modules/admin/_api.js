@@ -1,5 +1,5 @@
 const express = require("express");
-const { isloggedIn } = require("../../shared/auth");
+const { isloggedIn, hasRole } = require("../../shared/auth");
 const MongoId = require("../../shared/validator/isMongoId");
 const {
   add_admin,
@@ -14,7 +14,7 @@ const router = express.Router();
 
 // Middlewarelarni bitta arrayga saqlab olib berib yuboramiz.
 const mRegisterAdmin = [isloggedIn];
-const mListAdmin = [isloggedIn];
+const mListAdmin = [isloggedIn, hasRole(["super_admin"])];
 const mShowAdmin = [isloggedIn, MongoId];
 const mRemoveAdmin = [isloggedIn, MongoId];
 const mUnremoveAdmin = [isloggedIn, MongoId];
