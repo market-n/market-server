@@ -1,6 +1,11 @@
 const express = require("express");
 const { isloggedIn } = require("../../shared/auth");
-const { add_admin, login_admin, list_admin } = require("./_controller");
+const {
+  add_admin,
+  login_admin,
+  list_admin,
+  show_admin,
+} = require("./_controller");
 
 const router = express.Router();
 
