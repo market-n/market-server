@@ -1,4 +1,4 @@
-const { hashSync } = require("bcryptjs")
+const { hashSync } = require("bcryptjs");
 
 export const admins = [
     {
