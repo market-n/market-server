@@ -9,6 +9,12 @@ const jwt = require("jsonwebtoken");
 const config = require("../../shared/config");
 
 const changePasswordAdmin = async ({ body, admin }) => {
+  const { current_password, new_password } = body;
+  const findAdmin = await Admin.findOne({ _id: admin.id, is_deleted: false });
+
+  if (!findAdmin) {
+    throw new NotFoundError("Admin Not Found");
+  }
   return { msg: "Your password was successfull changed!" };
 };
 
