@@ -207,7 +207,7 @@ const swagger_js = {
           }
         },
       },
-      "patch":{
+      "patch": {
         "tags": ["Admin Router  "],
         "produces": [
           "application/json"
@@ -243,7 +243,7 @@ const swagger_js = {
           }],
       }
     },
-    "/admin/un/{id}":{
+    "/admin/un/{id}": {
       "delete": {
         "tags": ["Admin Router  "],
         "produces": [
@@ -283,6 +283,46 @@ const swagger_js = {
           }
         },
       },
+    },
+    "/change/password/admin": {
+      "patch": {
+        "tags": ["Admin Router  "],
+        'summary': "User Authentication",
+        "description": "Authenticate a user by validating their credentials and return a token if successful.",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "description": "Auth token",
+            "required": true,
+            "schema": {
+              "type": 'string'
+            }
+          },
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "User information.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ChangePassword"
+            }
+          }],
+        "responses": {
+          '200': {
+            "description": "OK",
+            "content": "application/json"
+          },
+          '400': {
+            "description": "Bad request, invalid input.",
+          },
+          '401':
+            { "description": "Unauthorized, invalid credentials." },
+          "404": {
+            "description": "not found"
+          }
+        },
+      }
     }
   },
   "definitions": {
@@ -365,6 +405,19 @@ const swagger_js = {
         }
       }
     },
+    "ChangePassword": {
+      "type": "object",
+      "properties": {
+        "current_password": {
+          "type": "string",
+          "exsample": "!@#$%^&*"
+        },
+        "new_password":{
+          "type": "string",
+          "exsample": "*&^%$#@!"
+        }
+      }
+    }
   }
 }
 
