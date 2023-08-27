@@ -27,7 +27,7 @@ const editAdmin = async ({ params, body }) => {
     editedAdminObj,
     {
       new: true,
-    }
+    },
   );
 
   return editedAdmin;
