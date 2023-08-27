@@ -36,7 +36,7 @@ router.patch("/admin/:id", mEditAdmin, edit_admin);
 router.patch(
   "/change/password/admin",
   mChangePasswordAdmin,
-  change_password_admin
+  change_password_admin,
 );
 
 module.exports = router;
