@@ -16,8 +16,8 @@ const router = express.Router();
 
 // Middlewarelarni bitta arrayga saqlab olib berib yuboramiz.
 const mRegisterAdmin = [isloggedIn, hasRole(["super_admin"])];
-const mListAdmin = [isloggedIn, hasRole(["super_admin"])];
-const mShowAdmin = [isloggedIn, MongoId, hasRole(["super_admin"])];
+const mListAdmin = [isloggedIn, hasRole(["admin", "super_admin"])];
+const mShowAdmin = [isloggedIn, MongoId, hasRole(["admin", "super_admin"])];
 const mRemoveAdmin = [isloggedIn, MongoId, hasRole(["super_admin"])];
 const mUnremoveAdmin = [isloggedIn, MongoId, hasRole(["super_admin"])];
 const mEditAdmin = [isloggedIn, MongoId, hasRole(["super_admin"])];
