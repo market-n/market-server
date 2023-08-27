@@ -1,12 +1,18 @@
 const Admin = require("./Admin");
 
-const { NotFoundError } = require("../../shared/errors");
+const { NotFoundError, BadRequestError } = require("../../shared/errors");
 
 const editAdmin = async ({ params, body }) => {
   const existing = await Admin.findOne({ _id: params.id, is_deleted: false });
 
   if (!existing) {
     throw new NotFoundError("Admin Not Found!");
+  }
+
+  const existedUsername = await Admin.findOne({ username: body.username });
+
+  if (existedUsername) {
+    throw new BadRequestError("This username already existed!");
   }
 
   const editedAdminObj = {

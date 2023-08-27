@@ -1,13 +1,13 @@
 ### REGISTER ADMIN
 POST http://localhost:5000/register/admin
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjY0ZTc2NGIwZWIyMWUwYjk5NTI3YjkxYyIsInJvbGUiOiJzdXBlcl9hZG1pbiJ9LCJpYXQiOjE2OTMwNTQyNTQsImV4cCI6MTY5MzE0MDY1NH0.Zope1NVgsslRWtl6xWSFrtSeDf4gqOubL-9X7LYo-l8
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjY0ZTc2NGIwZWIyMWUwYjk5NTI3YjkxYyIsInJvbGUiOiJzdXBlcl9hZG1pbiJ9LCJpYXQiOjE2OTMxNDM2MzYsImV4cCI6MTY5MzIzMDAzNn0.UINg7iU4n7_uslu0XzEd1zza_7qhKhd7DiU55Dn5xpc
 Content-Type: application/json
 
 {
   "first_name": "Hamkor",
   "last_name": "Bank",
   "image": "logohamkor.jpg",
-  "username": "hamkor.bank",
+  "username": "sher",
   "password": "1234"
 }
 
@@ -17,47 +17,46 @@ POST http://localhost:5000/login/admin
 Content-Type: application/json
 
 {
-  "username": "sherozbek.17",
+  "username": "sher",
   "password": "1234"
 }
 
 ### List Admin
 GET http://localhost:5000/admin
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjY0ZTc2NGIwZWIyMWUwYjk5NTI3YjkxYyIsInJvbGUiOiJzdXBlcl9hZG1pbiJ9LCJpYXQiOjE2OTMwNTQyNTQsImV4cCI6MTY5MzE0MDY1NH0.Zope1NVgsslRWtl6xWSFrtSeDf4gqOubL-9X7LYo-l8
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjY0ZWI1Mzg2MTFjMWQ4ZWE4YjYzYTVjOSIsInJvbGUiOiJhZG1pbiJ9LCJpYXQiOjE2OTMxNDQwMjUsImV4cCI6MTY5MzIzMDQyNX0.7xQISymL2eZG7-YtblbORSqFla6dnrik0NKiwvYLjcU
 
 
 ### Show Admin
 GET http://localhost:5000/admin/64e99e98bf3f2768d5517009
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjY0ZTc2NGIwZWIyMWUwYjk5NTI3YjkxYyIsInJvbGUiOiJzdXBlcl9hZG1pbiJ9LCJpYXQiOjE2OTMwNTQyNTQsImV4cCI6MTY5MzE0MDY1NH0.Zope1NVgsslRWtl6xWSFrtSeDf4gqOubL-9X7LYo-l8
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjY0ZTc2NGIwZWIyMWUwYjk5NTI3YjkxYyIsInJvbGUiOiJzdXBlcl9hZG1pbiJ9LCJpYXQiOjE2OTMxNDM2MzYsImV4cCI6MTY5MzIzMDAzNn0.UINg7iU4n7_uslu0XzEd1zza_7qhKhd7DiU55Dn5xpc
 
 ### Delete Admin
 DELETE http://localhost:5000/admin/64e99e98bf3f2768d5517009
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjY0ZTc2NGIwZWIyMWUwYjk5NTI3YjkxYyIsInJvbGUiOiJzdXBlcl9hZG1pbiJ9LCJpYXQiOjE2OTMwNTQyNTQsImV4cCI6MTY5MzE0MDY1NH0.Zope1NVgsslRWtl6xWSFrtSeDf4gqOubL-9X7LYo-l8
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjY0ZTc2NGIwZWIyMWUwYjk5NTI3YjkxYyIsInJvbGUiOiJzdXBlcl9hZG1pbiJ9LCJpYXQiOjE2OTMxNDM2MzYsImV4cCI6MTY5MzIzMDAzNn0.UINg7iU4n7_uslu0XzEd1zza_7qhKhd7DiU55Dn5xpc
 
 ### UnDelete Admin
 DELETE http://localhost:5000/admin/un/64e99e98bf3f2768d5517009
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjY0ZTc2NGIwZWIyMWUwYjk5NTI3YjkxYyIsInJvbGUiOiJzdXBlcl9hZG1pbiJ9LCJpYXQiOjE2OTMwNTQyNTQsImV4cCI6MTY5MzE0MDY1NH0.Zope1NVgsslRWtl6xWSFrtSeDf4gqOubL-9X7LYo-l8
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjY0ZTc2NGIwZWIyMWUwYjk5NTI3YjkxYyIsInJvbGUiOiJzdXBlcl9hZG1pbiJ9LCJpYXQiOjE2OTMxNDM2MzYsImV4cCI6MTY5MzIzMDAzNn0.UINg7iU4n7_uslu0XzEd1zza_7qhKhd7DiU55Dn5xpc
 
 
 
 ### EDIT ADMIN
-PATCH  http://localhost:5000/admin/64e99e98bf3f2768d5517009
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjY0ZTc2NGIwZWIyMWUwYjk5NTI3YjkxYyIsInJvbGUiOiJzdXBlcl9hZG1pbiJ9LCJpYXQiOjE2OTMwNTQyNTQsImV4cCI6MTY5MzE0MDY1NH0.Zope1NVgsslRWtl6xWSFrtSeDf4gqOubL-9X7LYo-l8
+PATCH  http://localhost:5000/admin/64eb53070d34ae403154917f
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjY0ZTc2NGIwZWIyMWUwYjk5NTI3YjkxYyIsInJvbGUiOiJzdXBlcl9hZG1pbiJ9LCJpYXQiOjE2OTMxNDM2MzYsImV4cCI6MTY5MzIzMDAzNn0.UINg7iU4n7_uslu0XzEd1zza_7qhKhd7DiU55Dn5xpc
 Content-Type: application/json
 
 {
   "first_name": "Hamkor eDIT",
   "last_name": "Bank eDIT",
   "image": "logohamkor.jpg",
-  "username": "hamkor.bank",
-  "password": "555"
+  "username": "sherf"
 }
 
 
 
 ### Change Password
 PATCH  http://localhost:5000/change/password/admin
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjY0ZTc2NGIwZWIyMWUwYjk5NTI3YjkxYyIsInJvbGUiOiJzdXBlcl9hZG1pbiJ9LCJpYXQiOjE2OTMwNTQyNTQsImV4cCI6MTY5MzE0MDY1NH0.Zope1NVgsslRWtl6xWSFrtSeDf4gqOubL-9X7LYo-l8
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjY0ZTc2NGIwZWIyMWUwYjk5NTI3YjkxYyIsInJvbGUiOiJzdXBlcl9hZG1pbiJ9LCJpYXQiOjE2OTMxNDM2MzYsImV4cCI6MTY5MzIzMDAzNn0.UINg7iU4n7_uslu0XzEd1zza_7qhKhd7DiU55Dn5xpc
 Content-Type: application/json
 
 {
