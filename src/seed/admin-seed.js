@@ -1,6 +1,6 @@
 const { hashSync } = require("bcryptjs")
 
-const admins = [
+export const admins = [
     {
         "first_name": "ayubxon",
         "last_name": "rahimov",
