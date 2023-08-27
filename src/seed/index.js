@@ -26,3 +26,6 @@ const User = require("../modules/users/Users");
     await User.insertMany();
   };
 
+  seedDB().then(() => {
+    mongoose.connection.close();
+  });
