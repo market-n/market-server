@@ -5,6 +5,9 @@ const config = require("../shared/config");
 // Bu joyda yozganimni sababi ko'p Collections ishlatilishi mumkin!
 const Admin = require("../modules/admin/Admin");
 
+// Seedlarni import qilib olish.
+// Seedlarni bu joyda import qilamiz hammasi
+// bir biri bilan aralashib ketmasligi uchun
 const seedData = async () => {
   const uri = `mongodb://${config.db.host}:${config.db.port}/${config.db.name}`;
   mongoose.set("strictQuery", false);
