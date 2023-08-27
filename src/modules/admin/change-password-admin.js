@@ -26,6 +26,11 @@ const changePasswordAdmin = async ({ body, admin }) => {
     throw new BadRequestError("New Password Incorrect!");
   }
 
+  await Admin.findByIdAndUpdate(
+    { _id: admin.id },
+    { password: hashSync(new_password, 10) }
+  );
+
   return { msg: "Your password was successfull changed!" };
 };
 
