@@ -7,7 +7,7 @@ const admins = [
     image: "Jhon_Doe.png",
     role: "super_admin",
     username: "ayubxon",
-    password: hashSync('123456', 10),
+    password: hashSync("123456", 10),
     // "is_deleted":false
   },
   {
@@ -16,7 +16,7 @@ const admins = [
     image: "sherozbek.png",
     role: "super_admin",
     username: "sherozbek.17",
-    password: hashSync('123456', 10),
+    password: hashSync("123456", 10),
     // "is_deleted":false
   },
   {
@@ -25,7 +25,7 @@ const admins = [
     image: "husan.png",
     role: "super_admin",
     username: "husan",
-    password: hashSync('123456', 10),
+    password: hashSync("123456", 10),
     // "is_deleted":false
   },
   {
@@ -34,7 +34,7 @@ const admins = [
     image: "admin1.png",
     role: "admin",
     username: "admin1",
-    password: hashSync('123456', 10),
+    password: hashSync("123456", 10),
     // "is_deleted":false
   },
   {
@@ -43,7 +43,7 @@ const admins = [
     image: "admin2.png",
     role: "admin",
     username: "admin2",
-    password: hashSync('123456', 10),
+    password: hashSync("123456", 10),
     // "is_deleted":false
   },
   {
@@ -52,7 +52,7 @@ const admins = [
     image: "asadbek.png",
     role: "admin",
     username: "asadbek",
-    password: hashSync('123456', 10),
+    password: hashSync("123456", 10),
     // "is_deleted":false
   },
   {
@@ -61,7 +61,7 @@ const admins = [
     image: "user.png",
     role: "admin",
     username: "user",
-    password: hashSync('123456', 10),
+    password: hashSync("123456", 10),
     // "is_deleted":false
   },
 ];
