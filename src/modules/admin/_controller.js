@@ -146,4 +146,5 @@ module.exports = {
   remove_admin,
   unremove_admin,
   edit_admin,
+  change_password_admin,
 };
