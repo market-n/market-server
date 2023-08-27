@@ -4,8 +4,9 @@
   "description": "Market loyihasi 22.08.2023 15",
   "main": "index.js",
   "scripts": {
+    "start:seed": "node ./src/seed/index.js", 
     "start": "node ./src/index.js",
-    "dev": "nodemon ./src/index.js"
+    "start:dev": "nodemon ./src/index.js"
   },
   "keywords": [
     "market"
