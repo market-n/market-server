@@ -22,6 +22,10 @@ const changePasswordAdmin = async ({ body, admin }) => {
     throw new ForbiddenError("Current Password Incorrect!");
   }
 
+  if (!new_password) {
+    throw new BadRequestError("New Password Incorrect!");
+  }
+
   return { msg: "Your password was successfull changed!" };
 };
 
