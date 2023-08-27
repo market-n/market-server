@@ -128,6 +128,11 @@ const edit_admin = async (req, res, next) => {
  */
 
 const change_password_admin = async (req, res, next) => {
+  try {
+    let result = await changePasswordAdmin({
+      body: req.body,
+      admin: req.admin,
+    });
     res.status(200).json({ data: result });
   } catch (error) {
     next(error);
