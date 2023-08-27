@@ -19,3 +19,10 @@ const User = require("../modules/users/Users");
       console.log("error", err);
     });
 
+  const seedDB = async () => {
+    // Har bitta collectionsga malumot qo'shishdan oldin
+    // o'sha collecttionni o'chirish kerek
+    await User.deleteMany({});
+    await User.insertMany();
+  };
+
