@@ -6,6 +6,7 @@ const showAdmin = require("./show-admin");
 const removeAdmin = require("./remove-admin");
 const unremoveAdmin = require("./unremove-admin");
 const editAdmin = require("./edit-admin");
+const changePasswordAdmin = require("./change-password-admin");
 
 /**
  *
@@ -119,6 +120,19 @@ const edit_admin = async (req, res, next) => {
   }
 };
 
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+
+const change_password_admin = async (req, res, next) => {
+    res.status(200).json({ data: result });
+  } catch (error) {
+    next(error);
+  }
+};
 module.exports = {
   add_admin,
   login_admin,
