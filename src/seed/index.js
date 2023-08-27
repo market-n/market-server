@@ -29,7 +29,7 @@ const seedData = async () => {
     // Har bitta collectionsga malumot qo'shishdan oldin
     // o'sha collecttionni o'chirish kerek
     await Admin.deleteMany({});
-    await ADmin.insertMany();
+    await Admin.insertMany(AdminSeed);
   };
 
   seedDB().then(() => {
