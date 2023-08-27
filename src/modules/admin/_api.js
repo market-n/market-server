@@ -33,6 +33,10 @@ router.get("/admin/:id", mShowAdmin, show_admin);
 router.delete("/admin/:id", mRemoveAdmin, remove_admin);
 router.delete("/admin/un/:id", mUnremoveAdmin, unremove_admin);
 router.patch("/admin/:id", mEditAdmin, edit_admin);
-router.patch("/change/password/admin", mChangePasswordAdmin, change_password_admin);
+router.patch(
+  "/change/password/admin",
+  mChangePasswordAdmin,
+  change_password_admin
+);
 
 module.exports = router;
