@@ -22,6 +22,8 @@ const mRemoveAdmin = [isloggedIn, MongoId, hasRole(["super_admin"])];
 const mUnremoveAdmin = [isloggedIn, MongoId, hasRole(["super_admin"])];
 const mEditAdmin = [isloggedIn, MongoId, hasRole(["super_admin"])];
 const mChangePasswordAdmin = [isloggedIn, hasRole(["super_admin"])];
+// const mChangeAllAdminspassword role(["super_admin"])
+// const mEditAllAdmins =rol(["super_admin"])
 
 // Routes
 router.post("/register/admin", mRegisterAdmin, add_admin);
