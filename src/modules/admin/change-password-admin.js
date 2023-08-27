@@ -15,6 +15,13 @@ const changePasswordAdmin = async ({ body, admin }) => {
   if (!findAdmin) {
     throw new NotFoundError("Admin Not Found");
   }
+
+  const is_correct = compareSync(current_password, findAdmin.password);
+
+  if (!is_correct) {
+    throw new ForbiddenError("Current Password Incorrect!");
+  }
+
   return { msg: "Your password was successfull changed!" };
 };
 
