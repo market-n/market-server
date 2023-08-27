@@ -4,3 +4,4 @@ const {
   ForbiddenError,
   BadRequestError,
 } = require("../../shared/errors");
+const config = require("../../shared/config");
