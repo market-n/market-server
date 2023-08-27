@@ -4,7 +4,7 @@
   "description": "Market loyihasi 22.08.2023 15",
   "main": "index.js",
   "scripts": {
-    "start:seed": "node ./src/seed/index.js", 
+    "start:seed": "node ./src/seed/index.js",
     "start": "node ./src/index.js",
     "start:dev": "nodemon ./src/index.js"
   },
@@ -29,5 +29,8 @@
     "swagger-autogen": "^2.23.5",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.2"
   }
 }
