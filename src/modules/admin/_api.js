@@ -9,6 +9,7 @@ const {
   remove_admin,
   unremove_admin,
   edit_admin,
+  change_password_admin,
 } = require("./_controller");
 
 const router = express.Router();
@@ -20,6 +21,7 @@ const mShowAdmin = [isloggedIn, MongoId, hasRole(["super_admin"])];
 const mRemoveAdmin = [isloggedIn, MongoId, hasRole(["super_admin"])];
 const mUnremoveAdmin = [isloggedIn, MongoId, hasRole(["super_admin"])];
 const mEditAdmin = [isloggedIn, MongoId, hasRole(["super_admin"])];
+const mChangePasswordAdmin = [isloggedIn, hasRole(["super_admin"])];
 
 // Routes
 router.post("/register/admin", mRegisterAdmin, add_admin);
@@ -29,5 +31,6 @@ router.get("/admin/:id", mShowAdmin, show_admin);
 router.delete("/admin/:id", mRemoveAdmin, remove_admin);
 router.delete("/admin/un/:id", mUnremoveAdmin, unremove_admin);
 router.patch("/admin/:id", mEditAdmin, edit_admin);
+router.patch("/change/password/admin", mChangePasswordAdmin, change_password_admin);
 
 module.exports = router;
