@@ -52,3 +52,15 @@ Content-Type: application/json
   "username": "hamkor.bank",
   "password": "555"
 }
+
+
+
+### Change Password
+PATCH  http://localhost:5000/change/password/admin
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjY0ZTc2NGIwZWIyMWUwYjk5NTI3YjkxYyIsInJvbGUiOiJzdXBlcl9hZG1pbiJ9LCJpYXQiOjE2OTMwNTQyNTQsImV4cCI6MTY5MzE0MDY1NH0.Zope1NVgsslRWtl6xWSFrtSeDf4gqOubL-9X7LYo-l8
+Content-Type: application/json
+
+{
+  "current_password": "000",
+  "new_password": "1234"
+}
