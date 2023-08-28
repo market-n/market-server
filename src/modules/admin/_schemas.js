@@ -127,3 +127,12 @@ const patchChangePasswordAdminSchemas = {
   }),
 };
 
+module.exports = {
+  postAddAdminSchemas,
+  postLoginAdminSchemas,
+  patchChangePasswordAdminSchemas,
+  patchEditAdminSchemas,
+  getShowAdminSchemas,
+  deletetAdminSchemas,
+  unDeletetAdminSchemas,
+};
