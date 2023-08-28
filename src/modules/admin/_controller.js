@@ -112,6 +112,7 @@ const remove_admin = async (req, res, next) => {
 
 const unremove_admin = async (req, res, next) => {
   try {
+    httpValidator({ params: req.params }, unDeletetAdminSchemas);
     let result = await unremoveAdmin({ params: req.params });
     res.status(200).json({ data: result });
   } catch (error) {
