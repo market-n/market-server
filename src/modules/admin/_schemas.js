@@ -33,3 +33,20 @@ const postAddAdminSchemas = {
   }),
 };
 
+const postLoginAdminSchemas = {
+  body: Joi.object({
+    username: Joi.string().min(6).max(64).required().messages({
+      "string.empty": "Username kiritilishi kerak!",
+      "string.min": "Username uzunligi 6 tadan ko'p bolishi kerak!",
+      "string.max": "Username uzunligi 64 tadan kam bolishi kerak!",
+      "any.required": "Username kiritilishi kerak!",
+    }),
+    password: Joi.string().min(6).max(64).required().messages({
+      "string.empty": "Password kiritilishi kerak!",
+      "string.min": "Password uzunligi 6 tadan ko'p bolishi kerak!",
+      "string.max": "Password uzunligi 64 tadan kam bolishi kerak!",
+      "any.required": "Password kiritilishi kerak!",
+    }),
+  }),
+};
+
