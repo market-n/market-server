@@ -7,6 +7,17 @@ const removeAdmin = require("./remove-admin");
 const unremoveAdmin = require("./unremove-admin");
 const editAdmin = require("./edit-admin");
 const changePasswordAdmin = require("./change-password-admin");
+const httpValidator = require("../../shared/http-validator");
+
+const {
+  postAddAdminSchemas,
+  postLoginAdminSchemas,
+  patchChangePasswordAdminSchemas,
+  patchEditAdminSchemas,
+  getShowAdminSchemas,
+  deletetAdminSchemas,
+  unDeletetAdminSchemas,
+} = require("./_schemas");
 
 /**
  *
@@ -17,6 +28,7 @@ const changePasswordAdmin = require("./change-password-admin");
 
 const add_admin = async (req, res, next) => {
   try {
+    httpValidator({ body: req.body }, postAddAdminSchemas);
     let result = await addAdmin({ body: req.body });
     res.status(201).json({ data: result });
   } catch (error) {
@@ -33,6 +45,7 @@ const add_admin = async (req, res, next) => {
 
 const login_admin = async (req, res, next) => {
   try {
+    httpValidator({ body: req.body }, postLoginAdminSchemas);
     let result = await loginAdmin({ body: req.body });
     res.status(200).json({ data: { token: result } });
   } catch (error) {
@@ -65,6 +78,7 @@ const list_admin = async (req, res, next) => {
 
 const show_admin = async (req, res, next) => {
   try {
+    httpValidator({ params: req.params }, getShowAdminSchemas);
     let result = await showAdmin({ params: req.params });
     res.status(200).json({ data: result });
   } catch (error) {
@@ -81,6 +95,7 @@ const show_admin = async (req, res, next) => {
 
 const remove_admin = async (req, res, next) => {
   try {
+    httpValidator({ params: req.params }, deletetAdminSchemas);
     let result = await removeAdmin({ params: req.params });
     res.status(200).json({ data: result });
   } catch (error) {
@@ -97,6 +112,7 @@ const remove_admin = async (req, res, next) => {
 
 const unremove_admin = async (req, res, next) => {
   try {
+    httpValidator({ params: req.params }, unDeletetAdminSchemas);
     let result = await unremoveAdmin({ params: req.params });
     res.status(200).json({ data: result });
   } catch (error) {
@@ -113,6 +129,10 @@ const unremove_admin = async (req, res, next) => {
 
 const edit_admin = async (req, res, next) => {
   try {
+    httpValidator(
+      { body: req.body, params: req.params },
+      patchEditAdminSchemas,
+    );
     let result = await editAdmin({ params: req.params, body: req.body });
     res.status(200).json({ data: result });
   } catch (error) {
@@ -129,6 +149,7 @@ const edit_admin = async (req, res, next) => {
 
 const change_password_admin = async (req, res, next) => {
   try {
+    httpValidator({ body: req.body }, patchChangePasswordAdminSchemas);
     let result = await changePasswordAdmin({
       body: req.body,
       admin: req.admin,
