@@ -9,6 +9,15 @@ const editAdmin = require("./edit-admin");
 const changePasswordAdmin = require("./change-password-admin");
 const httpValidator = require("../../shared/http-validator");
 
+const {
+  postAddAdminSchemas,
+  postLoginAdminSchemas,
+  patchChangePasswordAdminSchemas,
+  patchEditAdminSchemas,
+  getShowAdminSchemas,
+  deletetAdminSchemas,
+  unDeletetAdminSchemas,
+} = require("./_schemas");
 
 /**
  *
