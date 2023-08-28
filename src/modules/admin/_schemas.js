@@ -101,4 +101,11 @@ const patchEditAdminSchemas = {
       "string.max": "Username uzunligi 64 tadan kam bolishi kerak!",
     }),
   }),
+  params: Joi.object({
+    id: Joi.string().required().length(24).message({
+      "string.empty": "Id kiritilishi kerak!",
+      "string.length": "Id. Xato kiritilgan!",
+      "any.required": "Id kiritilishi kerak!",
+    }),
+  }),
 };
