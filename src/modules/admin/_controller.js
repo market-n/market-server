@@ -78,6 +78,7 @@ const list_admin = async (req, res, next) => {
 
 const show_admin = async (req, res, next) => {
   try {
+    httpValidator({ params: req.params }, getShowAdminSchemas);
     let result = await showAdmin({ params: req.params });
     res.status(200).json({ data: result });
   } catch (error) {
