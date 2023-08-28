@@ -14,6 +14,12 @@ const httpValidator = ({ body, params, query }, schema) => {
     if (error) throw new BadRequestError(error.message);
   }
 
+  if (params) {
+    const { error } = schema.params.validate(params);
+
+    if (error) throw new BadRequestError(error.message);
+  }
+
 };
 
 module.exports = httpValidator;
