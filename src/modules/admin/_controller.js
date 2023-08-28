@@ -149,6 +149,7 @@ const edit_admin = async (req, res, next) => {
 
 const change_password_admin = async (req, res, next) => {
   try {
+    httpValidator({ body: req.body }, patchChangePasswordAdminSchemas);
     let result = await changePasswordAdmin({
       body: req.body,
       admin: req.admin,
