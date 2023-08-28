@@ -129,6 +129,10 @@ const unremove_admin = async (req, res, next) => {
 
 const edit_admin = async (req, res, next) => {
   try {
+    httpValidator(
+      { body: req.body, params: req.params },
+      patchEditAdminSchemas,
+    );
     let result = await editAdmin({ params: req.params, body: req.body });
     res.status(200).json({ data: result });
   } catch (error) {
