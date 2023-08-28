@@ -28,6 +28,7 @@ const {
 
 const add_admin = async (req, res, next) => {
   try {
+    httpValidator({ body: req.body }, postAddAdminSchemas);
     let result = await addAdmin({ body: req.body });
     res.status(201).json({ data: result });
   } catch (error) {
