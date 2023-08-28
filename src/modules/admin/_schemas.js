@@ -109,3 +109,21 @@ const patchEditAdminSchemas = {
     }),
   }),
 };
+
+const patchChangePasswordAdminSchemas = {
+  body: Joi.object({
+    current_password: Joi.string().min(6).max(64).required().messages({
+      "string.empty": "Current Password kiritilishi kerak!",
+      "string.min": "Current Password uzunligi 6 tadan ko'p bolishi kerak!",
+      "string.max": "Current Password uzunligi 64 tadan kam bolishi kerak!",
+      "any.required": "Current Password kiritilishi kerak!",
+    }),
+    new_password: Joi.string().min(6).max(64).required().messages({
+      "string.empty": "New Password kiritilishi kerak!",
+      "string.min": "New Password uzunligi 6 tadan ko'p bolishi kerak!",
+      "string.max": "New Password uzunligi 64 tadan kam bolishi kerak!",
+      "any.required": "New Password kiritilishi kerak!",
+    }),
+  }),
+};
+
