@@ -1,14 +1,14 @@
 ### REGISTER ADMIN
 POST http://localhost:5000/register/admin
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjY0ZTc2NGIwZWIyMWUwYjk5NTI3YjkxYyIsInJvbGUiOiJzdXBlcl9hZG1pbiJ9LCJpYXQiOjE2OTMxNDM2MzYsImV4cCI6MTY5MzIzMDAzNn0.UINg7iU4n7_uslu0XzEd1zza_7qhKhd7DiU55Dn5xpc
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjY0ZWI2YzRmNWRkMTdhOWM2ZDUyYjRjNyIsInJvbGUiOiJzdXBlcl9hZG1pbiJ9LCJpYXQiOjE2OTMyMDMwMDEsImV4cCI6MTY5MzI4OTQwMX0.Xx7aADxavg9VZdAqpEaWiaus3imhT8vaEiAzzhFgd8w
 Content-Type: application/json
 
 {
-  "first_name": "Hamkor",
+  "first_name": "dfsgdfg",
   "last_name": "Bank",
   "image": "logohamkor.jpg",
-  "username": "sher",
-  "password": "1234"
+  "username": "sherozbekwdfdf.17",
+  "password": "123dgf4"
 }
 
 
@@ -17,8 +17,8 @@ POST http://localhost:5000/login/admin
 Content-Type: application/json
 
 {
-  "username": "sher",
-  "password": "1234"
+  "username": "sherozbek.17",
+  "password": "123456"
 }
 
 ### List Admin
@@ -41,25 +41,25 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjY0ZTc2
 
 
 ### EDIT ADMIN
-PATCH  http://localhost:5000/admin/64eb53070d34ae403154917f
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjY0ZTc2NGIwZWIyMWUwYjk5NTI3YjkxYyIsInJvbGUiOiJzdXBlcl9hZG1pbiJ9LCJpYXQiOjE2OTMxNDM2MzYsImV4cCI6MTY5MzIzMDAzNn0.UINg7iU4n7_uslu0XzEd1zza_7qhKhd7DiU55Dn5xpc
+PATCH  http://localhost:5000/admin/64eb6c4f5dd17a9c6d52b4cb
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjY0ZWI2YzRmNWRkMTdhOWM2ZDUyYjRjNyIsInJvbGUiOiJzdXBlcl9hZG1pbiJ9LCJpYXQiOjE2OTMyMDU0MTAsImV4cCI6MTY5MzI5MTgxMH0.-1j5dfMSimyLFCvog-kh4CxgfM-wIujYnPK8XrYJosI
 Content-Type: application/json
 
 {
-  "first_name": "Hamkor eDIT",
-  "last_name": "Bank eDIT",
+  "first_name": "Asadbek",
+  "last_name": "Mansurov",
   "image": "logohamkor.jpg",
-  "username": "sherf"
+  "username": "asadbekjon"
 }
 
 
 
 ### Change Password
 PATCH  http://localhost:5000/change/password/admin
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjY0ZTc2NGIwZWIyMWUwYjk5NTI3YjkxYyIsInJvbGUiOiJzdXBlcl9hZG1pbiJ9LCJpYXQiOjE2OTMxNDM2MzYsImV4cCI6MTY5MzIzMDAzNn0.UINg7iU4n7_uslu0XzEd1zza_7qhKhd7DiU55Dn5xpc
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjY0ZWI2YzRmNWRkMTdhOWM2ZDUyYjRjNyIsInJvbGUiOiJzdXBlcl9hZG1pbiJ9LCJpYXQiOjE2OTMyMDU0MTAsImV4cCI6MTY5MzI5MTgxMH0.-1j5dfMSimyLFCvog-kh4CxgfM-wIujYnPK8XrYJosI
 Content-Type: application/json
 
 {
-  "current_password": "000",
-  "new_password": "1234"
+  "current_password": "1234156",
+  "new_password": "123456"
 }
