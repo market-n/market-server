@@ -81,4 +81,24 @@ const unDeletetAdminSchemas = {
 };
 
 const patchEditAdminSchemas = {
+  body: Joi.object({
+    first_name: Joi.string().min(4).max(64).messages({
+      "string.empty": "Firstname kiritilishi kerak!",
+      "string.min": "Firstname uzunligi 4 tadan ko'p bolishi kerak!",
+      "string.max": "Firstname uzunligi 64 tadan kam bolishi kerak!",
+    }),
+    last_name: Joi.string().min(4).max(64).messages({
+      "string.empty": "Lastname kiritilishi kerak!",
+      "string.min": "Lastname uzunligi 4 tadan ko'p bolishi kerak!",
+      "string.max": "Lastname uzunligi 64 tadan kam bolishi kerak!",
+    }),
+    image: Joi.string().messages({
+      "string.empty": "Image kiritilishi kerak!",
+    }),
+    username: Joi.string().min(6).max(64).messages({
+      "string.empty": "Username kiritilishi kerak!",
+      "string.min": "Username uzunligi 6 tadan ko'p bolishi kerak!",
+      "string.max": "Username uzunligi 64 tadan kam bolishi kerak!",
+    }),
+  }),
 };
