@@ -80,3 +80,5 @@ const unDeletetAdminSchemas = {
   }),
 };
 
+const patchEditAdminSchemas = {
+};
