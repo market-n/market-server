@@ -31,16 +31,6 @@ const swagger_js = {
         ],
         responses: {
           200: {
-            parameters: [
-              {
-                name: "authorization",
-                in: "body",
-                description: "User information.",
-                schema: {
-                  $ref: "#/definitions/GetAllAdmins",
-                },
-              },
-            ],
             description: "OK",
             content: "application/json",
           },
@@ -68,7 +58,7 @@ const swagger_js = {
             description: "User information.",
             required: true,
             schema: {
-              $ref: "#/definitions/AddAdmin",
+              $ref: "#/definitions/schemas/AddAdmin",
             },
           },
         ],
@@ -366,54 +356,6 @@ const swagger_js = {
           },
         },
         required: ["current_password", "new_password"],
-      },
-      GetAllAdmins: {
-        type: "object",
-        properties: {
-          _id: {
-            type: "string",
-            example: "sdbsb212uyg3b4bg4",
-          },
-          first_name: {
-            type: "string",
-            example: "Jhon Doe",
-          },
-          last_name: {
-            type: "string",
-            example: "Marie Doe",
-          },
-          image: {
-            type: "string",
-            example: "Jhon_Doe.png",
-          },
-          is_deleted: {
-            type: "bolean",
-            example: "false",
-            default: "fasle",
-          },
-          role: {
-            type: "string",
-            exsample: "admin or super_admin",
-            default: "admin",
-          },
-          username: {
-            type: "string",
-            exsample: "ayubxon",
-          },
-          password: {
-            type: "string",
-            exsample: "!@#$%^&",
-          },
-          created_at: {
-            type: "Date",
-            example: "2023-08-27T15:53:34.540Z",
-          },
-
-          updated_at: {
-            type: "Date",
-            example: "2023-08-28T12:02:44.000Z",
-          },
-        },
       },
     },
   },
