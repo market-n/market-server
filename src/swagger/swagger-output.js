@@ -31,15 +31,18 @@ const swagger_js = {
         ],
         responses: {
           200: {
+            parameters: [
+              {
+                name: "authorization",
+                in: "body",
+                description: "User information.",
+                schema: {
+                  $ref: "#/definitions/GetAllAdmins",
+                },
+              },
+            ],
             description: "OK",
             content: "application/json",
-          },
-          400: {
-            description: "Bad request, invalid input.",
-          },
-          401: { description: "Unauthorized, invalid credentials." },
-          404: {
-            description: "not found",
           },
         },
       },
@@ -97,7 +100,7 @@ const swagger_js = {
             description: "User information.",
             required: true,
             schema: {
-              $ref: "#/definitions/LoginAdmin",
+              $ref: "#/definitions/schemas/LoginAdmin",
             },
           },
         ],
@@ -105,13 +108,6 @@ const swagger_js = {
           200: {
             description: "OK",
             content: "application/json",
-          },
-          400: {
-            description: "Bad request, invalid input.",
-          },
-          401: { description: "Unauthorized, invalid credentials." },
-          404: {
-            description: "not found",
           },
         },
       },
@@ -148,13 +144,6 @@ const swagger_js = {
             description: "OK",
             content: "application/json",
           },
-          400: {
-            description: "Bad request, invalid input.",
-          },
-          401: { description: "Unauthorized, invalid credentials." },
-          404: {
-            description: "not found",
-          },
         },
       },
       delete: {
@@ -185,13 +174,6 @@ const swagger_js = {
           200: {
             description: "OK",
             content: "application/json",
-          },
-          400: {
-            description: "Bad request, invalid input.",
-          },
-          401: { description: "Unauthorized, invalid credentials." },
-          404: {
-            description: "not found",
           },
         },
       },
@@ -224,10 +206,16 @@ const swagger_js = {
             description: "User information.",
             required: true,
             schema: {
-              $ref: "#/definitions/patchAdmin",
+              $ref: "#/definitions/schemas/patchAdmin",
             },
           },
         ],
+        responses: {
+          200: {
+            description: "OK",
+            content: "application/json",
+          },
+        },
       },
     },
     "/admin/un/{id}": {
@@ -260,13 +248,6 @@ const swagger_js = {
             description: "OK",
             content: "application/json",
           },
-          400: {
-            description: "Bad request, invalid input.",
-          },
-          401: { description: "Unauthorized, invalid credentials." },
-          404: {
-            description: "not found",
-          },
         },
       },
     },
@@ -290,9 +271,8 @@ const swagger_js = {
             name: "obj",
             in: "body",
             description: "User information.",
-            required: true,
             schema: {
-              $ref: "#/definitions/ChangePassword",
+              $ref: "#/definitions/schemas/ChangePassword",
             },
           },
         ],
@@ -301,94 +281,138 @@ const swagger_js = {
             description: "OK",
             content: "application/json",
           },
-          400: {
-            description: "Bad request, invalid input.",
-          },
-          401: { description: "Unauthorized, invalid credentials." },
-          404: {
-            description: "not found",
-          },
         },
       },
     },
   },
   definitions: {
-    AddAdmin: {
-      type: "object",
-      properties: {
-        first_name: {
-          type: "string",
-          example: "Jhon Doe",
+    schemas: {
+      AddAdmin: {
+        type: "object",
+        properties: {
+          first_name: {
+            type: "string",
+            example: "Jhon Doe",
+          },
+          last_name: {
+            type: "string",
+            example: "Marie Doe",
+          },
+          image: {
+            type: "string",
+            example: "Jhon_Doe.png",
+          },
+          role: {
+            type: "string",
+            exsample: "admin or super_admin",
+            default: "admin",
+          },
+          username: {
+            type: "string",
+            exsample: "ayubxon",
+          },
+          password: {
+            type: "string",
+            exsample: "!@#$%^&",
+          },
         },
-        last_name: {
-          type: "string",
-          example: "Marie Doe",
+        required: ["first_name", "last_name", "image", "username", "password"],
+      },
+      LoginAdmin: {
+        type: "object",
+        properties: {
+          username: {
+            type: "string",
+            exsample: "ayubxon",
+          },
+          password: {
+            type: "string",
+            exsample: "!@#$%^&",
+          },
         },
-        image: {
-          type: "string",
-          example: "Jhon_Doe.png",
-        },
-        role: {
-          type: "string",
-          exsample: "admin or super_admin",
-          default: "admin",
-        },
-        username: {
-          type: "string",
-          exsample: "ayubxon",
-        },
-        password: {
-          type: "string",
-          exsample: "!@#$%^&",
+        required: ["username", "password"],
+      },
+      patchAdmin: {
+        type: "object",
+        properties: {
+          first_name: {
+            type: "string",
+            example: "Jhon Doe",
+          },
+          last_name: {
+            type: "string",
+            example: "Marie Doe",
+          },
+          image: {
+            type: "string",
+            example: "Jhon_Doe.png",
+          },
+          username: {
+            type: "string",
+            exsample: "ayubxon",
+          },
         },
       },
-      required: ["first_name", "last_name", "image", "username", "password"],
-    },
-    LoginAdmin: {
-      type: "object",
-      properties: {
-        username: {
-          type: "string",
-          exsample: "ayubxon",
+      ChangePassword: {
+        type: "object",
+        properties: {
+          current_password: {
+            type: "string",
+            exsample: "!@#$%^&*",
+          },
+          new_password: {
+            type: "string",
+            exsample: "*&^%$#@!",
+          },
         },
-        password: {
-          type: "string",
-          exsample: "!@#$%^&",
-        },
+        required: ["current_password", "new_password"],
       },
-      required: ["username", "password"],
-    },
-    patchAdmin: {
-      type: "object",
-      properties: {
-        first_name: {
-          type: "string",
-          example: "Jhon Doe",
-        },
-        last_name: {
-          type: "string",
-          example: "Marie Doe",
-        },
-        image: {
-          type: "string",
-          example: "Jhon_Doe.png",
-        },
-        username: {
-          type: "string",
-          exsample: "ayubxon",
-        },
-      },
-    },
-    ChangePassword: {
-      type: "object",
-      properties: {
-        current_password: {
-          type: "string",
-          exsample: "!@#$%^&*",
-        },
-        new_password: {
-          type: "string",
-          exsample: "*&^%$#@!",
+      GetAllAdmins: {
+        type: "object",
+        properties: {
+          _id: {
+            type: "string",
+            example: "sdbsb212uyg3b4bg4",
+          },
+          first_name: {
+            type: "string",
+            example: "Jhon Doe",
+          },
+          last_name: {
+            type: "string",
+            example: "Marie Doe",
+          },
+          image: {
+            type: "string",
+            example: "Jhon_Doe.png",
+          },
+          is_deleted: {
+            type: "bolean",
+            example: "false",
+            default: "fasle",
+          },
+          role: {
+            type: "string",
+            exsample: "admin or super_admin",
+            default: "admin",
+          },
+          username: {
+            type: "string",
+            exsample: "ayubxon",
+          },
+          password: {
+            type: "string",
+            exsample: "!@#$%^&",
+          },
+          created_at: {
+            type: "Date",
+            example: "2023-08-27T15:53:34.540Z",
+          },
+
+          updated_at: {
+            type: "Date",
+            example: "2023-08-28T12:02:44.000Z",
+          },
         },
       },
     },
