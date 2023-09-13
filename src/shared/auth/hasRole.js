@@ -11,7 +11,7 @@ const { ForbiddenError } = require("../errors");
 const hasRole = (roles) => {
   return async (req, res, next) => {
     try {
-      const { role } = req.admin;
+      const { role } = req.user;
 
       if (!roles.includes(role)) {
         throw new ForbiddenError("This admin is not allowed this right!");

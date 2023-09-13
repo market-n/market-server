@@ -1,27 +1,31 @@
-const Admin = require("./Admin");
+const { compare } = require("bcryptjs");
 const { NotFoundError, ForbiddenError } = require("../../shared/errors");
-const { compareSync } = require("bcryptjs");
+const Seller = require("./Seller");
 const jwt = require("jsonwebtoken");
 const config = require("../../shared/config");
 
-const loginAdmin = async ({ body }) => {
+const loginSellerServices = async ({ body }) => {
   const { username, password } = body;
 
-  const existing = await Admin.findOne({ username, is_deleted: false });
+  const existing = await Seller.findOne({ username, is_deleted: false });
 
   if (!existing) {
-    throw new NotFoundError("Admin Not Found");
+    throw new NotFoundError("Seller Not Found");
   }
 
-  const is_correct = compareSync(password, existing.password);
+  const is_correct = await compare(password, existing.password);
 
   if (!is_correct) {
     throw new ForbiddenError("Password Incorrect!");
   }
 
+  if (!existing.is_allow) {
+    throw new ForbiddenError("Not verified by Admin!");
+  }
+
   let decode = {
     id: existing.id,
-    role: existing.role,
+    role: "seller",
   };
 
   const token = jwt.sign({ user: decode }, config.jwt.secret, {
@@ -31,4 +35,4 @@ const loginAdmin = async ({ body }) => {
   return token;
 };
 
-module.exports = loginAdmin;
+module.exports = loginSellerServices;

@@ -1,0 +1,22 @@
+### SELLER REGISTER
+POST http://localhost:5000/register/seller
+Content-Type: application/json
+
+{
+  "first_name": "Person",
+  "last_name": "Jeckson",
+  "email": "person111@gmail.com",
+  "address": "Toshkent Chilonzor",
+  "phone_number": "+998958657506",
+  "username": "personbek",
+  "password": "123456"
+}
+
+### SELLER LOGIN
+POST http://localhost:5000/login/seller
+Content-Type: application/json
+
+{
+  "username": "personbek",
+  "password": "123456"
+}

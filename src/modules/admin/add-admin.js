@@ -12,8 +12,6 @@ const addAdmin = async ({ body }) => {
   }
 
   if (body.role && body.role != "admin") {
-    console.log(body.role);
-    console.log(body.role != "admin");
     throw new BadRequestError("This role Not Found!");
   }
 

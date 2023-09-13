@@ -20,10 +20,12 @@ app.use(express.json());
 // import router
 const adminRoute = require("./modules/admin/_api");
 const marketRoute = require("./modules/market/_api");
+const sellerRoute = require("./modules/seller/_api");
 
 // middleware router
 app.use(adminRoute);
 app.use(marketRoute);
+app.use(sellerRoute);
 
 // DATABAZAGA ULANISH
 db();
