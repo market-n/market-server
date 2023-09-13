@@ -11,7 +11,7 @@ const SellerSchema = new mongoose.Schema(
 
     last_name: type,
 
-    city: type,
+    address: type,
 
     email: {
       ...type,
@@ -31,7 +31,7 @@ const SellerSchema = new mongoose.Schema(
     admin_id: {
       type: mongoose.SchemaTypes.ObjectId,
       ref: "admin",
-      default: "",
+      default: null,
     },
 
     username: {
