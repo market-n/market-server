@@ -32,7 +32,6 @@ const all_markets = async (req, res, next) => {
 
 const add_market = async (req, res, next) => {
   try {
-    let result = await addMarket({ body: req.body });
     let result = await addMarket({ body: req.body, user: req.user });
     res.status(201).json({ data: result });
   } catch (error) {
@@ -56,7 +55,6 @@ const edit_market = async (req, res, next) => {
   }
 };
 
-module.exports = { all_markets, add_market, edit_market };
 /**
  *
  * @param {express.Request} req
