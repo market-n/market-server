@@ -1,6 +1,6 @@
 ### REGISTER ADMIN
 POST http://localhost:5000/register/admin
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlYjZjNGY1ZGQxN2E5YzZkNTJiNGM3Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5NDYxMzU0NCwiZXhwIjoxNjk0Njk5OTQ0fQ.LCCUE77_zBeI39DKSaotkNlJyMNWEi2RjVta5D87XoY
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwMWQ0MzVhOGM5NzI2NGJkMmU0MTUzIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5NDYxODczNCwiZXhwIjoxNjk0NzA1MTM0fQ.QMtydDeQugU4Yk60SchanmxEWTQTbtXCnPSbW9W2V88
 Content-Type: application/json
 
 {
@@ -17,8 +17,8 @@ POST http://localhost:5000/login/admin
 Content-Type: application/json
 
 {
-  "username": "sherozbek.17",
-  "password": "123456"
+  "username": "ayubxon",
+  "password": "12345678"
 }
 
 ### List Admin
