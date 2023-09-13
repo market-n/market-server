@@ -2,6 +2,9 @@ const express = require("express");
 const listMarket = require("./list-market");
 const addMarket = require("./add-market");
 const editMarket = require("./edit-market");
+const RemoveMarket = require("./remove-market");
+const UnremoveMarket = require("./unremove-market");
+const changeAllow = require("./change-allow-market");
 
 /**
  *
@@ -29,7 +32,7 @@ const all_markets = async (req, res, next) => {
 
 const add_market = async (req, res, next) => {
   try {
-    let result = await addMarket({ body: req.body });
+    let result = await addMarket({ body: req.body, user: req.user });
     res.status(201).json({ data: result });
   } catch (error) {
     next(error);
@@ -52,4 +55,59 @@ const edit_market = async (req, res, next) => {
   }
 };
 
-module.exports = { all_markets, add_market, edit_market };
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+
+const remove_market = async (req, res, next) => {
+  try {
+    let result = await RemoveMarket({ params: req.params });
+    res.status(200).json({ data: result });
+  } catch (error) {
+    next(error);
+  }
+};
+
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+
+const unremove_market = async (req, res, next) => {
+  try {
+    let result = await UnremoveMarket({ params: req.params });
+    res.status(200).json({ data: result });
+  } catch (error) {
+    next(error);
+  }
+};
+
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+
+const change_allow = async (req, res, next) => {
+  try {
+    let result = await changeAllow({ params: req.params, user: req.user });
+    res.status(200).json({ data: result });
+  } catch (error) {
+    next(error);
+  }
+};
+
+module.exports = {
+  all_markets,
+  add_market,
+  edit_market,
+  remove_market,
+  unremove_market,
+  change_allow,
+};
