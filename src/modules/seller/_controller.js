@@ -13,6 +13,7 @@ const removeSellerServices = require("./remove-seller");
 const unremoveSellerServices = require("./unremove-seller");
 const listSellerServices = require("./list-seller");
 const showSellerServices = require("./show-seller");
+const editSellerServices = require("./edit-seller");
 
 /**
  *
@@ -135,6 +136,29 @@ const showSeller = async (req, res, next) => {
   }
 };
 
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+
+const editSeller = async (req, res, next) => {
+  try {
+    // httpValidator(
+    //   { body: req.body, params: req.params },
+    //   patchEditAdminSchemas,
+    // );
+    let result = await editSellerServices({
+      params: req.params,
+      body: req.body,
+    });
+    res.status(200).json({ data: result });
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   registerSeller,
   loginSeller,
@@ -143,4 +167,5 @@ module.exports = {
   unremoveSeller,
   listSeller,
   showSeller,
+  editSeller,
 };

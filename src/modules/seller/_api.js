@@ -6,6 +6,7 @@ const {
   unremoveSeller,
   listSeller,
   showSeller,
+  editSeller,
 } = require("./_controller");
 const { hasRole, isloggedIn } = require("../../shared/auth");
 const isMongoId = require("../../shared/validator/isMongoId");
@@ -29,6 +30,8 @@ const mUnRemoveSeller = [
   hasRole(["super_admin", "admin"]),
   isMongoId,
 ];
+
+const mEditSeller = [isLoggedIn, hasRole(["super_admin", "admin"]), isMongoId];
 const mGetListSeller = [isLoggedIn, hasRole(["super_admin", "admin"])];
 const mGetShowListSeller = [isLoggedIn, hasRole(["super_admin", "admin"])];
 
@@ -39,4 +42,5 @@ router.delete("/seller/:id", mRemoveSeller, removeSeller);
 router.delete("/seller/un/:id", mUnRemoveSeller, unremoveSeller);
 router.get("/seller", mGetListSeller, listSeller);
 router.get("/seller/:id", mGetShowListSeller, showSeller);
+router.patch("/seller/:id", mEditSeller, editSeller);
 module.exports = router;
