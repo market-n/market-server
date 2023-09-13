@@ -2,6 +2,7 @@ const express = require("express");
 const listMarket = require("./list-market");
 const addMarket = require("./add-market");
 const editMarket = require("./edit-market");
+const changeAllow = require("./change-allow-market");
 
 /**
  *
@@ -53,3 +54,28 @@ const edit_market = async (req, res, next) => {
 };
 
 module.exports = { all_markets, add_market, edit_market };
+
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+
+const change_allow = async (req, res, next) => {
+  try {
+    let result = await changeAllow({ params: req.params, user: req.user });
+    res.status(200).json({ data: result });
+  } catch (error) {
+    next(error);
+  }
+};
+
+module.exports = {
+  all_markets,
+  add_market,
+  edit_market,
+  remove_market,
+  unremove_market,
+  change_allow,
+};
