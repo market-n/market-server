@@ -1,9 +1,8 @@
 const { BadRequestError } = require("../../shared/errors");
 const Market = require("./Market");
 
-const addMarket = async ({ body }) => {
+const addMarket = async ({ body, user }) => {
   let { name, ...data } = body;
-
   let existed = await Market.findOne({ name });
 
   if (existed) {
@@ -12,6 +11,7 @@ const addMarket = async ({ body }) => {
 
   const market = await Market.create({
     ...data,
+    seller_id: user.id,
     name,
   });
 
