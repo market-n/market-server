@@ -11,6 +11,7 @@ const loginSellerServices = require("./login-seller");
 const changeAllowSellerServices = require("./change-allow-seller");
 const removeSellerServices = require("./remove-seller");
 const unremoveSellerServices = require("./unremove-seller");
+const listSellerServices = require("./list-seller");
 
 /**
  *
@@ -100,10 +101,27 @@ const unremoveSeller = async (req, res, next) => {
   }
 };
 
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+
+const listSeller = async (req, res, next) => {
+  try {
+    let result = await listSellerServices();
+    res.status(200).json({ data: result });
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   registerSeller,
   loginSeller,
   changeAllowSeller,
   removeSeller,
   unremoveSeller,
+  listSeller,
 };
