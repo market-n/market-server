@@ -3,6 +3,7 @@ const listMarket = require("./list-market");
 const addMarket = require("./add-market");
 const editMarket = require("./edit-market");
 const RemoveMarket = require("./remove-market");
+const UnremoveMarket = require("./unremove-market");
 const changeAllow = require("./change-allow-market");
 
 /**
@@ -72,6 +73,21 @@ const remove_market = async (req, res, next) => {
   }
 };
 
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+
+const unremove_market = async (req, res, next) => {
+  try {
+    let result = await UnremoveMarket({ params: req.params });
+    res.status(200).json({ data: result });
+  } catch (error) {
+    next(error);
+  }
+};
 
 /**
  *
