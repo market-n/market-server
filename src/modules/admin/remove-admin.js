@@ -12,7 +12,7 @@ const removeAdmin = async ({ params }) => {
   const removedAdmin = await Admin.findByIdAndUpdate(
     { _id: params.id },
     { is_deleted: true },
-    { new: true }
+    { new: true },
   );
 
   return removedAdmin;
