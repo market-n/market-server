@@ -10,6 +10,7 @@ const {
 const loginSellerServices = require("./login-seller");
 const changeAllowSellerServices = require("./change-allow-seller");
 const removeSellerServices = require("./remove-seller");
+const unremoveSellerServices = require("./unremove-seller");
 
 /**
  *
@@ -82,9 +83,27 @@ const removeSeller = async (req, res, next) => {
   }
 };
 
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+
+const unremoveSeller = async (req, res, next) => {
+  try {
+    // httpValidator({ params: req.params }, unDeletetAdminSchemas);
+    let result = await unremoveSellerServices({ params: req.params });
+    res.status(200).json({ data: result });
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   registerSeller,
   loginSeller,
   changeAllowSeller,
   removeSeller,
+  unremoveSeller,
 };
