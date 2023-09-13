@@ -12,6 +12,7 @@ const changeAllowSellerServices = require("./change-allow-seller");
 const removeSellerServices = require("./remove-seller");
 const unremoveSellerServices = require("./unremove-seller");
 const listSellerServices = require("./list-seller");
+const showSellerServices = require("./show-seller");
 
 /**
  *
@@ -117,6 +118,23 @@ const listSeller = async (req, res, next) => {
   }
 };
 
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+
+const showSeller = async (req, res, next) => {
+  try {
+    // httpValidator({ params: req.params }, getShowAdminSchemas);
+    let result = await showSellerServices({ params: req.params });
+    res.status(200).json({ data: result });
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   registerSeller,
   loginSeller,
@@ -124,4 +142,5 @@ module.exports = {
   removeSeller,
   unremoveSeller,
   listSeller,
+  showSeller,
 };
