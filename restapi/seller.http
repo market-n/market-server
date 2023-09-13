@@ -11,3 +11,12 @@ Content-Type: application/json
   "username": "personbek",
   "password": "123456"
 }
+
+### SELLER LOGIN
+POST http://localhost:5000/login/seller
+Content-Type: application/json
+
+{
+  "username": "personbek",
+  "password": "123456"
+}
