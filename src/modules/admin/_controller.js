@@ -152,7 +152,7 @@ const change_password_admin = async (req, res, next) => {
     httpValidator({ body: req.body }, patchChangePasswordAdminSchemas);
     let result = await changePasswordAdmin({
       body: req.body,
-      admin: req.admin,
+      admin: req.user,
     });
     res.status(200).json({ data: result });
   } catch (error) {

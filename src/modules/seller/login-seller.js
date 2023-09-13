@@ -28,7 +28,7 @@ const loginSellerServices = async ({ body }) => {
     role: "seller",
   };
 
-  const token = jwt.sign({ seller: decode }, config.jwt.secret, {
+  const token = jwt.sign({ user: decode }, config.jwt.secret, {
     expiresIn: config.jwt.expirec_in,
   });
 
