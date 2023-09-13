@@ -3,6 +3,7 @@ const {
   loginSeller,
   changeAllowSeller,
   removeSeller,
+  unremoveSeller,
 } = require("./_controller");
 const { hasRole, isloggedIn } = require("../../shared/auth");
 const isMongoId = require("../../shared/validator/isMongoId");
@@ -21,9 +22,16 @@ const mRemoveSeller = [
   isMongoId,
 ];
 
+const mUnRemoveSeller = [
+  isLoggedIn,
+  hasRole(["super_admin", "admin"]),
+  isMongoId,
+];
+
 router.post("/register/seller", registerSeller);
 router.post("/login/seller", loginSeller);
 router.post("/change/allow/seller/:id", mChangeAllowSeller, changeAllowSeller);
 router.delete("/seller/:id", mRemoveSeller, removeSeller);
+router.delete("/seller/un/:id", mUnRemoveSeller, unremoveSeller);
 
 module.exports = router;
