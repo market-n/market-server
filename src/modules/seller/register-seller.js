@@ -7,21 +7,21 @@ const registerSellerServices = async ({ body }) => {
 
   // Agar Email Topilsa Xato
   if (existing) {
-    throw new BadRequestError("Email already existed!");
+    throw new BadRequestError("This email already existed!");
   }
 
   existing = await Seller.findOne({ phone_number });
 
   // Agar Telefon Raqam Topilsa Xato
   if (existing) {
-    throw new BadRequestError("Phone Number already existed!");
+    throw new BadRequestError("This phone number already existed!");
   }
 
   existing = await Seller.findOne({ username });
 
   // Agar Username Topilsa Xato
   if (existing) {
-    throw new BadRequestError("Username already existed!");
+    throw new BadRequestError("This username already existed!");
   }
 
   const hashedPassword = await hash(password, 10);

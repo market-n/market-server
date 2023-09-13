@@ -22,7 +22,7 @@ const isLoggedIn = async (req, res, next) => {
       ignoreExpiration: false,
     });
 
-    req.admin = decoded.admin;
+    req.user = decoded.user;
 
     next();
   } catch (error) {
