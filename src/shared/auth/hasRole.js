@@ -14,7 +14,7 @@ const hasRole = (roles) => {
       const { role } = req.user;
 
       if (!roles.includes(role)) {
-        throw new ForbiddenError("This admin is not allowed this right!");
+        throw new ForbiddenError("This user is not allowed this right!");
       }
 
       next();
