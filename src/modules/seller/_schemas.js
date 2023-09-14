@@ -96,3 +96,13 @@ const deleteUnRemoveSellerSchemas = {
 
 const getListSellerSchemas = {};
 
+const getShowSellerSchemas = {
+  params: Joi.object({
+    id: Joi.string().required().length(24).message({
+      "string.empty": "Id kiritilishi kerak!",
+      "string.length": "Id Xato kiritilgan!",
+      "any.required": "Id kiritilishi kerak!",
+    }),
+  }),
+};
+

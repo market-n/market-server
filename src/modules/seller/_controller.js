@@ -10,6 +10,7 @@ const {
   deleteRemoveSellerSchemas,
   deleteUnRemoveSellerSchemas,
   getListSellerSchemas,
+  getShowSellerSchemas,
 } = require("./_schemas");
 const loginSellerServices = require("./login-seller");
 const changeAllowSellerServices = require("./change-allow-seller");
@@ -134,7 +135,7 @@ const listSeller = async (req, res, next) => {
 
 const showSeller = async (req, res, next) => {
   try {
-    // httpValidator({ params: req.params }, getShowAdminSchemas);
+    httpValidator({ params: req.params }, getShowSellerSchemas);
     let result = await showSellerServices({ params: req.params });
     res.status(200).json({ data: result });
   } catch (error) {
