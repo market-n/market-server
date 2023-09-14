@@ -2,6 +2,7 @@ const express = require("express");
 const addProductServices = require("./add-product");
 const listProductServices = require("./list-product");
 const showProductServices = require("./show-product");
+const removeProductServices = require("./remove-product");
 
 /**
  *
@@ -47,8 +48,26 @@ const showProduct = async (req, res, next) => {
     next(error);
   }
 };
+
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+
+const removeProduct = async (req, res, next) => {
+  try {
+    let result = await removeProductServices({ params: req.params });
+    res.status(200).json({ data: result });
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   addProduct,
   listProduct,
   showProduct,
+  removeProduct,
 };
