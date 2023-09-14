@@ -21,11 +21,13 @@ app.use(express.json());
 const adminRoute = require("./modules/admin/_api");
 const marketRoute = require("./modules/market/_api");
 const sellerRoute = require("./modules/seller/_api");
+const marketCategoryRoute = require("./modules/market-category/_api");
 
 // middleware router
 app.use(adminRoute);
 app.use(marketRoute);
 app.use(sellerRoute);
+app.use(marketCategoryRoute);
 
 // DATABAZAGA ULANISH
 db();
