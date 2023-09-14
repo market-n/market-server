@@ -4,6 +4,7 @@ const {
   AddMarketCategory,
   ListMarketCategory,
   EditMarketCategory,
+  removeMarketCategory,
 } = require("./_controller");
 
 const router = require("express").Router();
@@ -14,9 +15,19 @@ const mEditCategoryMarket = [
   hasRole(["super_admin", "admin"]),
   isMongoId,
 ];
+const mRemoveCategoryMarket = [
+  isloggedIn,
+  hasRole(["super_admin", "admin"]),
+  isMongoId,
+];
 
 router.post("/market-category", mAddCategoryMarket, AddMarketCategory);
 router.get("/market-category", ListMarketCategory);
 router.patch("/market-category/:id", mEditCategoryMarket, EditMarketCategory);
+router.delete(
+  "/market-category/:id",
+  mRemoveCategoryMarket,
+  removeMarketCategory,
+);
 
 module.exports = router;
