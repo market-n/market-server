@@ -145,26 +145,15 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwMjhh
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### PATCH EDIT PRODUCT
-PATCH http://localhost:5000/product/6502eafd5396a127f330797d
+PATCH http://localhost:5000/product/6502ea3b5396a127f3307979
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwMjhhNjMzNWJjMjM1MTk3ZWE4MTNhIiwicm9sZSI6InNlbGxlciJ9LCJpYXQiOjE2OTQ2ODc5MDAsImV4cCI6MTY5NDc3NDMwMH0.feUatnyXl-PfLe_icOW0C_DOra1CV-X5Ct8C_7yOToE
 Content-Type: application/json
 
 {
-  "name": "Samsung A10"
+  "name": "iPhone 15 PRO MAX",
+  "quantity": "10",
+  "price": 1420
 }
 
 
