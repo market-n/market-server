@@ -1,6 +1,7 @@
 const express = require("express");
 const AddMarketCategoryServices = require("./add-market-category");
 const ListMarketCategoryServices = require("./list-market-category");
+const editMarketCategoryServices = require("./edit-market-category");
 
 /**
  *
@@ -21,6 +22,13 @@ const AddMarketCategory = async (req, res, next) => {
   }
 };
 
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+
 const ListMarketCategory = async (req, res, next) => {
   try {
     const result = await ListMarketCategoryServices();
@@ -30,7 +38,28 @@ const ListMarketCategory = async (req, res, next) => {
   }
 };
 
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+
+const EditMarketCategory = async (req, res, next) => {
+  try {
+    const result = await editMarketCategoryServices({
+      body: req.body,
+      user: req.user,
+      params: req.params,
+    });
+    return res.status(200).json({ data: result });
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   AddMarketCategory,
   ListMarketCategory,
+  EditMarketCategory,
 };
