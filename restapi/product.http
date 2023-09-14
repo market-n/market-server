@@ -1,0 +1,160 @@
+### POST ADD PRODUCT
+POST http://localhost:5000/product
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwMjhhNjMzNWJjMjM1MTk3ZWE4MTNhIiwicm9sZSI6InNlbGxlciJ9LCJpYXQiOjE2OTQ2ODc5MDAsImV4cCI6MTY5NDc3NDMwMH0.feUatnyXl-PfLe_icOW0C_DOra1CV-X5Ct8C_7yOToE
+Content-Type: application/json
+
+{
+  "name": "Samsung S9",
+  "description": "(Qora, Tillrang, Oq) - Rangda.",
+  "image": "samsung.png",
+  "price": 980,
+  "quantity": 100,
+  "market_id": "6502e205d2f333638e38a5d9",
+  "measurement": "dona"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### GET LIST PRODUCT
+GET http://localhost:5000/product
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### GET SHOW PRODUCT
+GET http://localhost:5000/product/6502eafd5396a127f330797d
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwMjhhNjMzNWJjMjM1MTk3ZWE4MTNhIiwicm9sZSI6InNlbGxlciJ9LCJpYXQiOjE2OTQ2ODc5MDAsImV4cCI6MTY5NDc3NDMwMH0.feUatnyXl-PfLe_icOW0C_DOra1CV-X5Ct8C_7yOToE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### REMOVE SHOW PRODUCT
+DELETE http://localhost:5000/product/6502eafd5396a127f330797d
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwMjhhNjMzNWJjMjM1MTk3ZWE4MTNhIiwicm9sZSI6InNlbGxlciJ9LCJpYXQiOjE2OTQ2ODc5MDAsImV4cCI6MTY5NDc3NDMwMH0.feUatnyXl-PfLe_icOW0C_DOra1CV-X5Ct8C_7yOToE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### UN REMOVE SHOW PRODUCT
+DELETE http://localhost:5000/product/un/6502eafd5396a127f330797d
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwMjhhNjMzNWJjMjM1MTk3ZWE4MTNhIiwicm9sZSI6InNlbGxlciJ9LCJpYXQiOjE2OTQ2ODc5MDAsImV4cCI6MTY5NDc3NDMwMH0.feUatnyXl-PfLe_icOW0C_DOra1CV-X5Ct8C_7yOToE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### PATCH EDIT PRODUCT
+PATCH http://localhost:5000/product/6502ea3b5396a127f3307979
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwMjhhNjMzNWJjMjM1MTk3ZWE4MTNhIiwicm9sZSI6InNlbGxlciJ9LCJpYXQiOjE2OTQ2ODc5MDAsImV4cCI6MTY5NDc3NDMwMH0.feUatnyXl-PfLe_icOW0C_DOra1CV-X5Ct8C_7yOToE
+Content-Type: application/json
+
+{
+  "name": "iPhone 15 PRO MAX",
+  "quantity": "10",
+  "price": 1420
+}
+
+
+
