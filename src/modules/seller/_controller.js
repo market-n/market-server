@@ -7,6 +7,7 @@ const {
   postRegisterSellerSchemas,
   postLoginSellerSchemas,
   postChangeAllowSellerSchemas,
+  deleteRemoveSellerSchemas,
 } = require("./_schemas");
 const loginSellerServices = require("./login-seller");
 const changeAllowSellerServices = require("./change-allow-seller");
@@ -80,7 +81,7 @@ const changeAllowSeller = async (req, res, next) => {
 
 const removeSeller = async (req, res, next) => {
   try {
-    // httpValidator({ params: req.params }, deletetAdminSchemas);
+    httpValidator({ params: req.params }, deleteRemoveSellerSchemas);
     let result = await removeSellerServices({ params: req.params });
     res.status(200).json({ data: result });
   } catch (error) {
