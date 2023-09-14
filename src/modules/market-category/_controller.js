@@ -18,7 +18,7 @@ const AddMarketCategory = async (req, res, next) => {
       body: req.body,
       user: req.user,
     });
-    return res.status(200).json({ data: result });
+    return res.status(201).json({ data: result });
   } catch (error) {
     next(error);
   }
