@@ -2,7 +2,7 @@ const { NotFoundError } = require("../../shared/errors");
 const Product = require("./Product");
 
 const showProductServices = async ({ params }) => {
-  const existed = await Product.findOne({ _id: params.id, is_deleted: true });
+  const existed = await Product.findOne({ _id: params.id, is_deleted: false });
 
   if (!existed) {
     throw new NotFoundError("Product Not Found");
