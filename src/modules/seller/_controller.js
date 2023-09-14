@@ -11,6 +11,7 @@ const {
   deleteUnRemoveSellerSchemas,
   getListSellerSchemas,
   getShowSellerSchemas,
+  patchEditSellerSchemas,
 } = require("./_schemas");
 const loginSellerServices = require("./login-seller");
 const changeAllowSellerServices = require("./change-allow-seller");
@@ -152,10 +153,10 @@ const showSeller = async (req, res, next) => {
 
 const editSeller = async (req, res, next) => {
   try {
-    // httpValidator(
-    //   { body: req.body, params: req.params },
-    //   patchEditAdminSchemas,
-    // );
+    httpValidator(
+      { body: req.body, params: req.params },
+      patchEditSellerSchemas,
+    );
     let result = await editSellerServices({
       params: req.params,
       body: req.body,
