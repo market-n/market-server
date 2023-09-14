@@ -1,6 +1,7 @@
 const express = require("express");
 const addProductServices = require("./add-product");
 const listProductServices = require("./list-product");
+const showProductServices = require("./show-product");
 
 /**
  *
@@ -32,7 +33,22 @@ const listProduct = async (req, res, next) => {
   }
 };
 
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+const showProduct = async (req, res, next) => {
+  try {
+    const result = await showProductServices({ params: req.params });
+    res.status(200).json({ data: result });
+  } catch (error) {
+    next(error);
+  }
+};
 module.exports = {
   addProduct,
   listProduct,
+  showProduct,
 };
