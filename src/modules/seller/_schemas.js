@@ -94,3 +94,5 @@ const deleteUnRemoveSellerSchemas = {
   }),
 };
 
+const getListSellerSchemas = {};
+
