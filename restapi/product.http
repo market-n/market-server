@@ -1,4 +1,4 @@
-### POST PRODUCT
+### POST ADD PRODUCT
 POST http://localhost:5000/product
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwMjhhNjMzNWJjMjM1MTk3ZWE4MTNhIiwicm9sZSI6InNlbGxlciJ9LCJpYXQiOjE2OTQ2ODc5MDAsImV4cCI6MTY5NDc3NDMwMH0.feUatnyXl-PfLe_icOW0C_DOra1CV-X5Ct8C_7yOToE
 Content-Type: application/json
@@ -12,3 +12,10 @@ Content-Type: application/json
   "market_id": "6502e205d2f333638e38a5d9",
   "measurement": "dona"
 }
+
+
+
+
+
+### GET LIST PRODUCT
+GET http://localhost:5000/product
