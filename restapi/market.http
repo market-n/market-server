@@ -1,12 +1,12 @@
 ### create market 
 POST http://localhost:5000/market
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwMWM5MjhjYzYyNjQxZDFmZTg4ZjczIiwicm9sZSI6InNlbGxlciJ9LCJpYXQiOjE2OTQ2MTYxODQsImV4cCI6MTY5NDcwMjU4NH0.YRgovniRYPN7TxoD6YmN4m9YsHBbeFbaO315avci9qE
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwMjhhNjMzNWJjMjM1MTk3ZWE4MTNhIiwicm9sZSI6InNlbGxlciJ9LCJpYXQiOjE2OTQ2ODc2NzgsImV4cCI6MTY5NDc3NDA3OH0.uvl-gH_cvS8BbgjWAXvnnmQKZJaKTBSh0q9xYwsfYxs
 
 {
-  "name": "hello",
-  "image": "salom",
-  "description": "zzz"
+  "name": "Asaxiy",
+  "image": "asaxiy.jpg",
+  "description": "Kitoblar va telefonlar kerak bo'lsa bizga murojat qiling!"
 }
 
 ### delete market 
