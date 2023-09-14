@@ -4,5 +4,8 @@ Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlYjZjNGY1ZGQxN2E5YzZkNTJiNGM3Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5NDY2OTU4MiwiZXhwIjoxNjk0NzU1OTgyfQ.XBqWmlPp535RmcsbKMt3HYLuYEqIbgYsmBSvSA4OKlY
 
 {
-  "name":"Kiyimlar"
+  "name":"Bolalar o'yinchoqlari"
 }
+
+### GET LIST MARKET CATEGORY
+GET http://localhost:5000/market-category
