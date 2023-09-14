@@ -1,5 +1,6 @@
 const express = require("express");
 const AddMarketCategoryServices = require("./add-market-category");
+const ListMarketCategoryServices = require("./list-market-category");
 
 /**
  *
@@ -20,6 +21,16 @@ const AddMarketCategory = async (req, res, next) => {
   }
 };
 
+const ListMarketCategory = async (req, res, next) => {
+  try {
+    const result = await ListMarketCategoryServices();
+    return res.status(200).json({ data: result });
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   AddMarketCategory,
+  ListMarketCategory,
 };
