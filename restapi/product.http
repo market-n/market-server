@@ -19,3 +19,15 @@ Content-Type: application/json
 
 ### GET LIST PRODUCT
 GET http://localhost:5000/product
+
+
+
+
+
+
+
+
+
+### GET LIST PRODUCT
+GET http://localhost:5000/product/6502eafd5396a127f330797d
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwMjhhNjMzNWJjMjM1MTk3ZWE4MTNhIiwicm9sZSI6InNlbGxlciJ9LCJpYXQiOjE2OTQ2ODc5MDAsImV4cCI6MTY5NDc3NDMwMH0.feUatnyXl-PfLe_icOW0C_DOra1CV-X5Ct8C_7yOToE
