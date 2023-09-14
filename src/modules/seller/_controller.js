@@ -6,6 +6,12 @@ const httpValidator = require("../../shared/http-validator");
 const {
   postRegisterSellerSchemas,
   postLoginSellerSchemas,
+  postChangeAllowSellerSchemas,
+  deleteRemoveSellerSchemas,
+  deleteUnRemoveSellerSchemas,
+  getListSellerSchemas,
+  getShowSellerSchemas,
+  patchEditSellerSchemas,
 } = require("./_schemas");
 const loginSellerServices = require("./login-seller");
 const changeAllowSellerServices = require("./change-allow-seller");
@@ -58,6 +64,7 @@ const loginSeller = async (req, res, next) => {
 
 const changeAllowSeller = async (req, res, next) => {
   try {
+    httpValidator({ params: req.params }, postChangeAllowSellerSchemas);
     const result = await changeAllowSellerServices({
       user: req.user,
       params: req.params,
@@ -78,7 +85,7 @@ const changeAllowSeller = async (req, res, next) => {
 
 const removeSeller = async (req, res, next) => {
   try {
-    // httpValidator({ params: req.params }, deletetAdminSchemas);
+    httpValidator({ params: req.params }, deleteRemoveSellerSchemas);
     let result = await removeSellerServices({ params: req.params });
     res.status(200).json({ data: result });
   } catch (error) {
@@ -95,7 +102,7 @@ const removeSeller = async (req, res, next) => {
 
 const unremoveSeller = async (req, res, next) => {
   try {
-    // httpValidator({ params: req.params }, unDeletetAdminSchemas);
+    httpValidator({ params: req.params }, deleteUnRemoveSellerSchemas);
     let result = await unremoveSellerServices({ params: req.params });
     res.status(200).json({ data: result });
   } catch (error) {
@@ -112,6 +119,7 @@ const unremoveSeller = async (req, res, next) => {
 
 const listSeller = async (req, res, next) => {
   try {
+    httpValidator({}, getListSellerSchemas);
     let result = await listSellerServices();
     res.status(200).json({ data: result });
   } catch (error) {
@@ -128,7 +136,7 @@ const listSeller = async (req, res, next) => {
 
 const showSeller = async (req, res, next) => {
   try {
-    // httpValidator({ params: req.params }, getShowAdminSchemas);
+    httpValidator({ params: req.params }, getShowSellerSchemas);
     let result = await showSellerServices({ params: req.params });
     res.status(200).json({ data: result });
   } catch (error) {
@@ -145,10 +153,10 @@ const showSeller = async (req, res, next) => {
 
 const editSeller = async (req, res, next) => {
   try {
-    // httpValidator(
-    //   { body: req.body, params: req.params },
-    //   patchEditAdminSchemas,
-    // );
+    httpValidator(
+      { body: req.body, params: req.params },
+      patchEditSellerSchemas,
+    );
     let result = await editSellerServices({
       params: req.params,
       body: req.body,
