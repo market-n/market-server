@@ -17,8 +17,8 @@ POST http://localhost:5000/login/admin
 Content-Type: application/json
 
 {
-  "username": "ayubxon",
-  "password": "12345678"
+  "username": "sherozbek.17",
+  "password": "123456"
 }
 
 ### List Admin

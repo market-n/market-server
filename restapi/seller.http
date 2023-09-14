@@ -7,8 +7,8 @@ Content-Type: application/json
   "last_name": "Jeckson",
   "email": "person111@gmail.com",
   "address": "Toshkent Chilonzor",
-  "phone_number": "+998958657506",
-  "username": "personbek",
+  "phone_number": "+998958657522",
+  "username": "person",
   "password": "123456"
 }
 
@@ -23,35 +23,35 @@ Content-Type: application/json
 
 
 ### Change Allow Seller
-POST http://localhost:5000/change/allow/seller/65019aba522ecaf22b10e144
+POST http://localhost:5000/change/allow/seller/65028a6335bc235197ea813a
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlYjZjNGY1ZGQxN2E5YzZkNTJiNGM3Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5NDYxNjY2NSwiZXhwIjoxNjk0NzAzMDY1fQ.MR9NXNLUdJmVRORqFyc3tMjLopaxU9S1CcKak5kjT2I
-# Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwMTlhYmE1MjJlY2FmMjJiMTBlMTQ0Iiwicm9sZSI6InNlbGxlciJ9LCJpYXQiOjE2OTQ2MTcyNjcsImV4cCI6MTY5NDcwMzY2N30.cUs5OkV3_KcxAsJM8nuhDO-uo4AMDqgCb3DvLDFzzrQ
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlYjZjNGY1ZGQxN2E5YzZkNTJiNGM3Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5NDY2NTQ4MSwiZXhwIjoxNjk0NzUxODgxfQ.5wWIKevdujYgk_Dv0Z601ha8LWBaOcCnXqmp1CX9Tnc
+# Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwMjhhNjMzNWJjMjM1MTk3ZWE4MTNhIiwicm9sZSI6InNlbGxlciJ9LCJpYXQiOjE2OTQ2NjU3NjgsImV4cCI6MTY5NDc1MjE2OH0.wprRuGY3gMqQEXPncY-ifaDP2UB2UHuwEg5k2UUs2lk
 
 
 
 ### Remove Seller by Admin
 DELETE http://localhost:5000/seller/65019aba522ecaf22b10e144
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlYjZjNGY1ZGQxN2E5YzZkNTJiNGM3Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5NDYxNjY2NSwiZXhwIjoxNjk0NzAzMDY1fQ.MR9NXNLUdJmVRORqFyc3tMjLopaxU9S1CcKak5kjT2I
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlYjZjNGY1ZGQxN2E5YzZkNTJiNGM3Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5NDY2NTQ4MSwiZXhwIjoxNjk0NzUxODgxfQ.5wWIKevdujYgk_Dv0Z601ha8LWBaOcCnXqmp1CX9Tnc
 
 
 ### Un Remove Seller by Admin
 DELETE http://localhost:5000/seller/un/65019aba522ecaf22b10e144
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlYjZjNGY1ZGQxN2E5YzZkNTJiNGM3Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5NDYxNjY2NSwiZXhwIjoxNjk0NzAzMDY1fQ.MR9NXNLUdJmVRORqFyc3tMjLopaxU9S1CcKak5kjT2I
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlYjZjNGY1ZGQxN2E5YzZkNTJiNGM3Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5NDY2NTQ4MSwiZXhwIjoxNjk0NzUxODgxfQ.5wWIKevdujYgk_Dv0Z601ha8LWBaOcCnXqmp1CX9Tnc
 
 
 ### GET Seller by Admin
 GET http://localhost:5000/seller
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlYjZjNGY1ZGQxN2E5YzZkNTJiNGM3Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5NDYxNjY2NSwiZXhwIjoxNjk0NzAzMDY1fQ.MR9NXNLUdJmVRORqFyc3tMjLopaxU9S1CcKak5kjT2I
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlYjZjNGY1ZGQxN2E5YzZkNTJiNGM3Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5NDY2NTQ4MSwiZXhwIjoxNjk0NzUxODgxfQ.5wWIKevdujYgk_Dv0Z601ha8LWBaOcCnXqmp1CX9Tnc
 
 
 ### GET SHOW Seller by Admin
 GET http://localhost:5000/seller/65019aba522ecaf22b10e144
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlYjZjNGY1ZGQxN2E5YzZkNTJiNGM3Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5NDYxNjY2NSwiZXhwIjoxNjk0NzAzMDY1fQ.MR9NXNLUdJmVRORqFyc3tMjLopaxU9S1CcKak5kjT2I
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlYjZjNGY1ZGQxN2E5YzZkNTJiNGM3Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5NDY2NTQ4MSwiZXhwIjoxNjk0NzUxODgxfQ.5wWIKevdujYgk_Dv0Z601ha8LWBaOcCnXqmp1CX9Tnc
 
 
 
@@ -59,10 +59,10 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlYjZj
 ### EDIT Seller by Admin
 PATCH http://localhost:5000/seller/65019aba522ecaf22b10e144
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlYjZjNGY1ZGQxN2E5YzZkNTJiNGM3Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5NDYxNjY2NSwiZXhwIjoxNjk0NzAzMDY1fQ.MR9NXNLUdJmVRORqFyc3tMjLopaxU9S1CcKak5kjT2I
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlYjZjNGY1ZGQxN2E5YzZkNTJiNGM3Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5NDY2NTQ4MSwiZXhwIjoxNjk0NzUxODgxfQ.5wWIKevdujYgk_Dv0Z601ha8LWBaOcCnXqmp1CX9Tnc
 
 {
   "first_name": "OK",
-  "username": "like",
+  "username": "personbek",
   "password": "123456"
 }
