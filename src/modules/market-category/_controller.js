@@ -2,6 +2,7 @@ const express = require("express");
 const AddMarketCategoryServices = require("./add-market-category");
 const ListMarketCategoryServices = require("./list-market-category");
 const editMarketCategoryServices = require("./edit-market-category");
+const removeMarketCategoryServices = require("./remove-market-category");
 
 /**
  *
@@ -58,8 +59,28 @@ const EditMarketCategory = async (req, res, next) => {
   }
 };
 
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+
+const removeMarketCategory = async (req, res, next) => {
+  try {
+    let result = await removeMarketCategoryServices({
+      params: req.params,
+      user: req.user,
+    });
+    res.status(200).json({ data: result });
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   AddMarketCategory,
   ListMarketCategory,
   EditMarketCategory,
+  removeMarketCategory,
 };
