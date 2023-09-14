@@ -6,6 +6,7 @@ const httpValidator = require("../../shared/http-validator");
 const {
   postRegisterSellerSchemas,
   postLoginSellerSchemas,
+  postChangeAllowSellerSchemas,
 } = require("./_schemas");
 const loginSellerServices = require("./login-seller");
 const changeAllowSellerServices = require("./change-allow-seller");
@@ -58,6 +59,7 @@ const loginSeller = async (req, res, next) => {
 
 const changeAllowSeller = async (req, res, next) => {
   try {
+    httpValidator({ params: req.params }, postChangeAllowSellerSchemas);
     const result = await changeAllowSellerServices({
       user: req.user,
       params: req.params,
