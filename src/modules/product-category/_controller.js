@@ -3,6 +3,7 @@ const AddproductCategoryServices = require("./add-product-category");
 const ListproductCategoryServices = require("./list-product-category");
 const editproductCategoryServices = require("./edit-product-category");
 const removeproductCategoryServices = require("./remove-product-category");
+const unremoveproductCategoryServices = require("./unremove-product-category");
 
 /**
  *
@@ -69,6 +70,25 @@ const EditproductCategory = async (req, res, next) => {
 const removeproductCategory = async (req, res, next) => {
   try {
     let result = await removeproductCategoryServices({
+      params: req.params,
+      user: req.user,
+    });
+    res.status(200).json({ data: result });
+  } catch (error) {
+    next(error);
+  }
+};
+
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+
+const unremoveproductCategory = async (req, res, next) => {
+  try {
+    let result = await unremoveproductCategoryServices({
       params: req.params,
       user: req.user,
     });
