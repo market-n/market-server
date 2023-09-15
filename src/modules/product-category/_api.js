@@ -16,11 +16,21 @@ const mEditCategoryproduct = [
   hasRole(["super_admin", "admin", "seller"]),
   isMongoId,
 ];
+const mRemoveCategoryproduct = [
+  isloggedIn,
+  hasRole(["super_admin", "admin", "seller"]),
+  isMongoId,
+];
 router.post("/product-category", mAddCategoryproduct, AddproductCategory);
 router.get("/product-category", ListproductCategory);
 router.patch(
   "/product-category/:id",
   mEditCategoryproduct,
   EditproductCategory,
+);
+router.delete(
+  "/product-category/:id",
+  mRemoveCategoryproduct,
+  removeproductCategory,
 );
 module.exports = router;
