@@ -1,0 +1,120 @@
+### POST ADD CATEGORY PRODUCT
+POST http://localhost:5000/product-category
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwMjhhNjMzNWJjMjM1MTk3ZWE4MTNhIiwicm9sZSI6InNlbGxlciJ9LCJpYXQiOjE2OTQ3NzEyMTcsImV4cCI6MTY5NDg1NzYxN30.uMtHsRQ0eDLc-kBvyR5GEeTx7FkQmI8VpK6Nv3N1phg
+
+{
+  "name":"Futbol formalar",
+  "market_id":"6502e205d2f333638e38a5d9"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### GET LIST CATEGORY PRODUCT
+GET http://localhost:5000/product-category
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### PATCH CATEGORY PRODUCT
+PATCH http://localhost:5000/product-category/650432047364a2261e66d913
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwMjhhNjMzNWJjMjM1MTk3ZWE4MTNhIiwicm9sZSI6InNlbGxlciJ9LCJpYXQiOjE2OTQ3NzEyMTcsImV4cCI6MTY5NDg1NzYxN30.uMtHsRQ0eDLc-kBvyR5GEeTx7FkQmI8VpK6Nv3N1phg
+
+{
+  "name":"Xo'l mevalar"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### DELETE CATEGORY PRODUCT
+DELETE http://localhost:5000/product-category/650429b026a6dbbbc215ffb7
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwMjhhNjMzNWJjMjM1MTk3ZWE4MTNhIiwicm9sZSI6InNlbGxlciJ9LCJpYXQiOjE2OTQ3NzEyMTcsImV4cCI6MTY5NDg1NzYxN30.uMtHsRQ0eDLc-kBvyR5GEeTx7FkQmI8VpK6Nv3N1phg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### UN DELETE CATEGORY PRODUCT
+DELETE http://localhost:5000/product-category/un/650429b026a6dbbbc215ffb7
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwMjhhNjMzNWJjMjM1MTk3ZWE4MTNhIiwicm9sZSI6InNlbGxlciJ9LCJpYXQiOjE2OTQ3NzEyMTcsImV4cCI6MTY5NDg1NzYxN30.uMtHsRQ0eDLc-kBvyR5GEeTx7FkQmI8VpK6Nv3N1phg
