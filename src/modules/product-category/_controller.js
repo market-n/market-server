@@ -1,6 +1,8 @@
 const express = require("express");
 const AddproductCategoryServices = require("./add-product-category");
 const ListproductCategoryServices = require("./list-product-category");
+const editproductCategoryServices = require("./edit-product-category");
+const removeproductCategoryServices = require("./remove-product-category");
 
 /**
  *
@@ -52,6 +54,25 @@ const EditproductCategory = async (req, res, next) => {
       params: req.params,
     });
     return res.status(200).json({ data: result });
+  } catch (error) {
+    next(error);
+  }
+};
+
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+
+const removeproductCategory = async (req, res, next) => {
+  try {
+    let result = await removeproductCategoryServices({
+      params: req.params,
+      user: req.user,
+    });
+    res.status(200).json({ data: result });
   } catch (error) {
     next(error);
   }
