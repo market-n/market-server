@@ -98,3 +98,10 @@ const unremoveproductCategory = async (req, res, next) => {
   }
 };
 
+module.exports = {
+  AddproductCategory,
+  ListproductCategory,
+  EditproductCategory,
+  removeproductCategory,
+  unremoveproductCategory,
+};
