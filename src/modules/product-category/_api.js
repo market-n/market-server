@@ -3,6 +3,9 @@ const isMongoId = require("../../shared/validator/isMongoId");
 const {
   AddproductCategory,
   ListproductCategory,
+  EditproductCategory,
+  removeproductCategory,
+  unremoveproductCategory,
 } = require("./_controller");
 
 const router = require("express").Router();
@@ -21,6 +24,12 @@ const mRemoveCategoryproduct = [
   hasRole(["super_admin", "admin", "seller"]),
   isMongoId,
 ];
+const mUnRemoveCategoryproduct = [
+  isloggedIn,
+  hasRole(["super_admin", "admin"]),
+  isMongoId,
+];
+
 router.post("/product-category", mAddCategoryproduct, AddproductCategory);
 router.get("/product-category", ListproductCategory);
 router.patch(
@@ -33,4 +42,10 @@ router.delete(
   mRemoveCategoryproduct,
   removeproductCategory,
 );
+router.delete(
+  "/product-category/un/:id",
+  mUnRemoveCategoryproduct,
+  unremoveproductCategory,
+);
+
 module.exports = router;
