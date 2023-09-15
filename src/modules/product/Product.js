@@ -21,7 +21,7 @@ const ProductSchema = new mongoose.Schema(
     category_id: {
       type: mongoose.SchemaTypes.ObjectId,
       ref: "category",
-      default: null,
+      required: true,
     },
     market_id: {
       type: mongoose.SchemaTypes.ObjectId,
