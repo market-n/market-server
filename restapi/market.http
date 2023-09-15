@@ -9,20 +9,147 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwMjhh
   "description": "Kitoblar va telefonlar kerak bo'lsa bizga murojat qiling!"
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### delete market 
 DELETE  http://localhost:5000/market/6501a9722070b961f47d7e6d
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwMWQ0MzVhOGM5NzI2NGJkMmU0MTUzIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5NDYxODczNCwiZXhwIjoxNjk0NzA1MTM0fQ.QMtydDeQugU4Yk60SchanmxEWTQTbtXCnPSbW9W2V88
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### un delete market 
 DELETE  http://localhost:5000/market/un/6501a9722070b961f47d7e6d
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwMWQ0MzVhOGM5NzI2NGJkMmU0MTUzIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5NDYxODczNCwiZXhwIjoxNjk0NzA1MTM0fQ.QMtydDeQugU4Yk60SchanmxEWTQTbtXCnPSbW9W2V88
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### all markets 
 GET http://localhost:5000/market
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwMWM5MjhjYzYyNjQxZDFmZTg4ZjczIiwicm9sZSI6InNlbGxlciJ9LCJpYXQiOjE2OTQ2MTYxODQsImV4cCI6MTY5NDcwMjU4NH0.YRgovniRYPN7TxoD6YmN4m9YsHBbeFbaO315avci9qE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### change allow
 POST http://localhost:5000/market/change/allow/6501a9722070b961f47d7e6d
 Content-Type: application/json
