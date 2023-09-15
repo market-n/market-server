@@ -15,7 +15,7 @@ const isMongoId = require("../../shared/validator/isMongoId");
 let router = express.Router();
 
 let mAddMarket = [isloggedIn, hasRole(["seller"])];
-let mListMarket = [isloggedIn, hasRole(["super_admin", "admin", "seller"])];
+let mListMarket = [];
 let mEditMarket = [
   isloggedIn,
   hasRole(["super_admin", "admin", "seller"]),
