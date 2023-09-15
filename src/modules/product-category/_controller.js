@@ -37,3 +37,23 @@ const ListproductCategory = async (req, res, next) => {
   }
 };
 
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+
+const EditproductCategory = async (req, res, next) => {
+  try {
+    const result = await editproductCategoryServices({
+      body: req.body,
+      user: req.user,
+      params: req.params,
+    });
+    return res.status(200).json({ data: result });
+  } catch (error) {
+    next(error);
+  }
+};
+
