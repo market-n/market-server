@@ -1,5 +1,5 @@
 const express = require("express");
-const registerUserServices = require("./add-user");
+const registerUserServices = require("./register-user");
 
 /**
  *
