@@ -3,5 +3,13 @@ POST http://localhost:5000/user/register
 Content-Type: application/json
 
 {
-  "name": "OK"
+  "first_name": "Person",
+  "last_name": "Jeckson",
+  "age": 23,
+  "image": "personjon.jpg",
+  "email": "person111s@gmail.com",
+  "address": "Toshkent Chilonzor",
+  "phone_number": "+998958657525",
+  "username": "personjon",
+  "password": "123456"
 }
