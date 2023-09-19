@@ -33,6 +33,16 @@ const loginUser = async (req, res, next) => {
   }
 };
 
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+
+const listUser = async (req, res, next) => {
+};
+
 module.exports = {
   registerUser,
   loginUser,
