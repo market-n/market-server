@@ -1,6 +1,7 @@
 const express = require("express");
 const registerUserServices = require("./register-user");
 const loginUserService = require("./login-user");
+const listUserServices = require("./list-user");
 
 /**
  *
@@ -41,9 +42,16 @@ const loginUser = async (req, res, next) => {
  */
 
 const listUser = async (req, res, next) => {
+  try {
+    let result = await listUserServices();
+    res.status(200).json({ data: result });
+  } catch (error) {
+    next(error);
+  }
 };
 
 module.exports = {
   registerUser,
   loginUser,
+  listUser,
 };
