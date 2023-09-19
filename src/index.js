@@ -24,6 +24,7 @@ const sellerRoute = require("./modules/seller/_api");
 const marketCategoryRoute = require("./modules/market-category/_api");
 const productRoute = require("./modules/product/_api");
 const productCategoryRoute = require("./modules/product-category/_api");
+const userRoute = require("./modules/user/_api");
 
 // middleware router
 app.use(adminRoute);
@@ -32,6 +33,7 @@ app.use(sellerRoute);
 app.use(marketCategoryRoute);
 app.use(productRoute);
 app.use(productCategoryRoute);
+app.use(userRoute);
 
 // DATABAZAGA ULANISH
 db();
