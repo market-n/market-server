@@ -28,7 +28,7 @@ Content-Type: application/json
 
 
 
-### REGISTER user
+### LOGIN user
 POST http://localhost:5000/user/login
 Content-Type: application/json
 
@@ -37,3 +37,26 @@ Content-Type: application/json
   "password": "123456"
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### LIST user
+GET http://localhost:5000/user
