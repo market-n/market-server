@@ -16,6 +16,21 @@ const registerUser = async (req, res, next) => {
   }
 };
 
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+
+const loginUser = async (req, res, next) => {
+  try {
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   registerUser,
+  loginUser,
 };
