@@ -7,5 +7,11 @@ const loginUserService = async ({ body }) => {
     throw new NotFoundError("User Not Found");
   }
 
+  const is_correct = await compare(password, existing.password);
+
+  if (!is_correct) {
+    throw new ForbiddenError("Password Incorrect!");
+  }
+
 };
 module.exports = loginUserService;
