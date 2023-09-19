@@ -13,18 +13,27 @@ const Userschema = new mongoose.Schema(
       type: mongoose.SchemaTypes.Number,
       required: true,
     },
-    email: type,
-    city: type,
-    phone_number: {
-      type: mongoose.SchemaTypes.Number,
+    email: {
+      type: mongoose.SchemaTypes.String,
       required: true,
+      unique: true,
+    },
+    address: type,
+    phone_number: {
+      type: mongoose.SchemaTypes.String,
+      required: true,
+      unique: true,
     },
     image: type,
     password: type,
-    username: type,
+    username: {
+      type: mongoose.SchemaTypes.String,
+      required: true,
+      unique: true,
+    },
     is_deleted: {
       type: mongoose.SchemaTypes.Boolean,
-      required: true,
+      default: false,
     },
   },
   {
