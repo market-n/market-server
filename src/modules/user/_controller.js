@@ -9,6 +9,8 @@ const registerUserServices = require("./add-user");
  */
 const registerUser = async (req, res, next) => {
   try {
+    const result = await registerUserServices({ body: req.body });
+    res.status(201).json({ data: result });
   } catch (error) {
     next(error);
   }
