@@ -34,6 +34,23 @@ const user_list = async (req, res, next) => {
   }
 };
 
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ * @returns
+ */
+
+const delete_user = async (req, res, next) => {
+  try {
+    let result = await DeleteUser({ params: req.params });
+    res.status(200).json({ data: result });
+  } catch (error) {
+    next(error);
+  }
+};
+
 const change_allow_user = async (req, res, next) => {
   try {
     let result = await changeAllowUser({ params: req.params, user: req.user });
