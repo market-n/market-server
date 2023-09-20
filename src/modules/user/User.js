@@ -13,22 +13,40 @@ const Userschema = new mongoose.Schema(
       type: mongoose.SchemaTypes.Number,
       required: true,
     },
-    email: type,
+    email: {
+      type: mongoose.SchemaTypes.String,
+      required: true,
+      unique: true,
+    },
     city: type,
     phone_number: {
       type: mongoose.SchemaTypes.Number,
       required: true,
+      unique: true,
     },
     image: type,
     password: type,
-    username: type,
+    username: {
+      type: mongoose.SchemaTypes.String,
+      required: true,
+      unique: true,
+    },
+    is_allow: {
+      type: mongoose.SchemaTypes.Boolean,
+      default: false,
+    },
     is_deleted: {
       type: mongoose.SchemaTypes.Boolean,
-      required: true,
+      default: false,
+    },
+    admin_id: {
+      type: mongoose.SchemaTypes.ObjectId,
+      ref: "admin",
+      default: null,
     },
   },
+
   {
-    versionKey: true,
     timestamps: {
       createdAt: "created_at",
       updatedAt: "updated_at",
