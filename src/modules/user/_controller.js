@@ -1,5 +1,10 @@
+const express = require("express");
 const addUser = require("./add-user");
 const UserList = require("./list-user");
+const DeleteUser = require("./delete-user");
+const UnDeleteUser = require("./un-delete-user");
+const changeAllowUser = require("./change-allow-market");
+
 /**
  *
  * @param {express.Request} req
@@ -51,6 +56,23 @@ const delete_user = async (req, res, next) => {
   }
 };
 
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ * @returns
+ */
+
+const undelete_user = async (req, res, next) => {
+  try {
+    let result = await UnDeleteUser({ params: req.params });
+    res.status(200).json({ data: result });
+  } catch (error) {
+    next(error);
+  }
+};
+
 const change_allow_user = async (req, res, next) => {
   try {
     let result = await changeAllowUser({ params: req.params, user: req.user });
@@ -60,6 +82,10 @@ const change_allow_user = async (req, res, next) => {
   }
 };
 
+module.exports = {
   add_user,
   user_list,
+  delete_user,
+  undelete_user,
   change_allow_user,
+};
