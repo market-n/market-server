@@ -34,5 +34,15 @@ const user_list = async (req, res, next) => {
   }
 };
 
+const change_allow_user = async (req, res, next) => {
+  try {
+    let result = await changeAllowUser({ params: req.params, user: req.user });
+    res.status(200).json({ data: result });
+  } catch (error) {
+    next(error);
+  }
+};
+
   add_user,
   user_list,
+  change_allow_user,
