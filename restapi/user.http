@@ -1,0 +1,19 @@
+### all users 
+GET http://localhost:5000/users
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwMWQ0MzVhOGM5NzI2NGJkMmU0MTU0Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5NTIxMjk5NSwiZXhwIjoxNjk1Mjk5Mzk1fQ.2d6cBYgvXx6VxIPw9HVja5j4LTvZXmLijEGP8TFbTso
+### create users 
+POST  http://localhost:5000/users
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwMWQ0MzVhOGM5NzI2NGJkMmU0MTU0Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5NTIxMjk5NSwiZXhwIjoxNjk1Mjk5Mzk1fQ.2d6cBYgvXx6VxIPw9HVja5j4LTvZXmLijEGP8TFbTso
+
+{
+"first_name":"ayub",
+"last_name":"rahimov",
+"age":15,
+"email":"ayub@gmail.com",
+"city":"toshkent",
+"phone_number":"+9989999999999",
+"image":"ayub.png",
+"password":"12345678",
+"username":"ayub"
+}
