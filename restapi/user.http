@@ -7,10 +7,10 @@ Content-Type: application/json
   "last_name": "Jeckson",
   "age": 23,
   "image": "personjon.jpg",
-  "email": "person111s@gmail.com",
+  "email": "person1101@gmail.com",
   "address": "Toshkent Chilonzor",
-  "phone_number": "+998958657525",
-  "username": "personjon",
+  "phone_number": "+998938657525",
+  "username": "pperson",
   "password": "123456"
 }
 
@@ -60,3 +60,42 @@ Content-Type: application/json
 
 ### LIST user
 GET http://localhost:5000/user
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### SHOW user
+GET http://localhost:5000/user/6509da3695154d29083f583d
