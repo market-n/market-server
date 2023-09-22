@@ -6,6 +6,8 @@ const {
   loginUser,
   listUser,
   showUser,
+  removeUser,
+  unremoveUser,
 } = require("./_controller");
 
 const router = require("express").Router();
@@ -16,5 +18,7 @@ router.post("/user/register", registerUser);
 router.post("/user/login", loginUser);
 router.get("/user", listUser);
 router.get("/user/:id", mShowUser, showUser);
+router.delete("/user/:id", removeUser);
+router.delete("/user/un/:id", unremoveUser);
 
 module.exports = router;
