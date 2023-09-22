@@ -4,6 +4,7 @@ const UserList = require("./list-user");
 const DeleteUser = require("./delete-user");
 const UnDeleteUser = require("./un-delete-user");
 const changeAllowUser = require("./change-allow-market");
+const edit_user = require("./edit-users");
 
 /**
  *
@@ -82,10 +83,20 @@ const change_allow_user = async (req, res, next) => {
   }
 };
 
+const updated_user = async (req, res, next) => {
+  try {
+    let result = await edit_user({ params: req.params, body: req.body });
+    return res.status(200).json({ msg: "nice", data: result });
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   add_user,
   user_list,
   delete_user,
   undelete_user,
   change_allow_user,
+  updated_user,
 };

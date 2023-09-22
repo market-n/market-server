@@ -5,6 +5,7 @@ const {
   undelete_user,
   delete_user,
   change_allow_user,
+  updated_user,
 } = require("./_controller");
 const { hasRole, isloggedIn } = require("../../shared/auth/index");
 
@@ -15,10 +16,12 @@ let mListUser = [isloggedIn, hasRole(["super_admin", "admin", "seller"])];
 let mDeleteUser = [isloggedIn, hasRole(["super_admin", "admin"])];
 let mUndeleteUser = [isloggedIn, hasRole(["super_admin", "admin"])];
 let mChangeAllowUser = [isloggedIn, hasRole(["super_admin", "admin"])];
+let mUpdateUser = [isloggedIn, hasRole(["super_admin", "admim"])];
+
 router.post("/users", mAddUser, add_user);
 router.get("/users", mListUser, user_list);
 router.delete("/users/:id", mDeleteUser, delete_user);
 router.delete("/users/un/:id", mUndeleteUser, undelete_user);
 router.post("/users/change/allow/:id", mChangeAllowUser, change_allow_user);
-
+router.put("/users/:id", mUpdateUser, updated_user);
 module.exports = router;
