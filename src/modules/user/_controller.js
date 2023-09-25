@@ -5,6 +5,7 @@ const listUserServices = require("./list-user");
 const showUserServices = require("./show-user");
 const removeUserServices = require("./remove-user");
 const unremoveUserServices = require("./unremove-user");
+const editUserServices = require("./edit-user");
 
 /**
  *
@@ -101,6 +102,25 @@ const unremoveUser = async (req, res, next) => {
   }
 };
 
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+
+const editUser = async (req, res, next) => {
+  try {
+    let result = await editUserServices({
+      params: req.params,
+      body: req.body,
+    });
+    res.status(200).json({ data: result });
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   registerUser,
   loginUser,
@@ -108,4 +128,5 @@ module.exports = {
   showUser,
   removeUser,
   unremoveUser,
+  editUser,
 };
