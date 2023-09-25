@@ -178,3 +178,28 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwOWRh
 ### UnDelete user
 DELETE http://localhost:5000/user/un/6509da3695154d29083f583d
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwOWRhMzY5NTE1NGQyOTA4M2Y1ODNkIiwicm9sZSI6InVzZXIifSwiaWF0IjoxNjk1NjQ3MDEwLCJleHAiOjE2OTU3MzM0MTB9.ZshRb-2_stdzGnvPDEyMiw0TU-Jkdi6FKws2y-vabSk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### EDIT user
+PATCH http://localhost:5000/user/6509da3695154d29083f583d
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwOWRhMzY5NTE1NGQyOTA4M2Y1ODNkIiwicm9sZSI6InVzZXIifSwiaWF0IjoxNjk1NjQ3MDEwLCJleHAiOjE2OTU3MzM0MTB9.ZshRb-2_stdzGnvPDEyMiw0TU-Jkdi6FKws2y-vabSk
+Content-Type: application/json
+
+{
+  "first_name": "Jogi"
+}
