@@ -8,6 +8,7 @@ const {
   showUser,
   removeUser,
   unremoveUser,
+  editUser,
 } = require("./_controller");
 
 const router = require("express").Router();
@@ -20,5 +21,6 @@ router.get("/user", listUser);
 router.get("/user/:id", mShowUser, showUser);
 router.delete("/user/:id", removeUser);
 router.delete("/user/un/:id", unremoveUser);
+router.patch("/user/:id", editUser);
 
 module.exports = router;
