@@ -1,5 +1,6 @@
 const express = require("express");
 const addMarketCommentServices = require("./add-market-comment");
+const listMarketCommentServices = require("./list-market-comment");
 
 /**
  *
@@ -20,6 +21,25 @@ const addMarketComment = async (req, res, next) => {
   }
 };
 
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+
+const listMarketComment = async (req, res, next) => {
+  try {
+    const result = await listMarketCommentServices({
+      params: req.params,
+    });
+    res.status(201).json({ data: result });
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   addMarketComment,
+  listMarketComment,
 };
