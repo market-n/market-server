@@ -33,7 +33,6 @@ const listMarketComment = async (req, res, next) => {
     const result = await listMarketCommentServices({
       params: req.params,
     });
-    res.status(201).json({ data: result });
   } catch (error) {
     next(error);
   }
