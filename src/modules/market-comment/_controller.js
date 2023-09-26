@@ -33,6 +33,21 @@ const listMarketComment = async (req, res, next) => {
     const result = await listMarketCommentServices({
       params: req.params,
     });
+
+/**
+ *
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+
+const removeMarketComment = async (req, res, next) => {
+  try {
+    const result = await removeMarketCommentServices({
+      user: req.user,
+      params: req.params,
+    });
+    res.status(200).json({ data: result });
   } catch (error) {
     next(error);
   }
