@@ -57,3 +57,32 @@ GET http://localhost:5000/market-comment/6502e205d2f333638e38a5d9
 
 
 
+### EDIT COMMENT
+PATCH http://localhost:5000/market-comment/65119906c8cc1bc3dffed0ce
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwOWRhMzY5NTE1NGQyOTA4M2Y1ODNkIiwicm9sZSI6InVzZXIifSwiaWF0IjoxNjk1NjUxNTg2LCJleHAiOjE2OTU3Mzc5ODZ9.zg4QFA85hb3--5bXjjmwKzXUf346ezt7tffRf_SwQdw
+
+{
+  "comment": "454545"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
