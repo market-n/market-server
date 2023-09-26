@@ -35,3 +35,61 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwOWRh
 
 ### LIST COMMENT
 GET http://localhost:5000/market-comment/6502e205d2f333638e38a5d9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### EDIT COMMENT
+PATCH http://localhost:5000/market-comment/65119906c8cc1bc3dffed0ce
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjUwOWRhMzY5NTE1NGQyOTA4M2Y1ODNkIiwicm9sZSI6InVzZXIifSwiaWF0IjoxNjk1NjUxNTg2LCJleHAiOjE2OTU3Mzc5ODZ9.zg4QFA85hb3--5bXjjmwKzXUf346ezt7tffRf_SwQdw
+
+{
+  "comment": "454545"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### REMOVE COMMENT
+DELETE http://localhost:5000/market-comment/65119f24eb9f9e2db774afbd
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlYjZjNGY1ZGQxN2E5YzZkNTJiNGM3Iiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5NTcxOTM0NiwiZXhwIjoxNjk1ODA1NzQ2fQ.E3dDm3gx3QRbrUGI5Qtsah2RezG-CxgJSlESv-Bskl0
