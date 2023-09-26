@@ -1,4 +1,8 @@
-const { addMarketComment, listMarketComment } = require("./_controller");
+const {
+  addMarketComment,
+  listMarketComment,
+  editMarketComment,
+} = require("./_controller");
 const { isloggedIn, hasRole } = require("../../shared/auth");
 const MongoId = require("../../shared/validator/isMongoId");
 const router = require("express").Router();
@@ -10,5 +14,6 @@ const mRemoveMarketComment = [isloggedIn, MongoId];
 
 router.post("/market-comment", mAddMarketComment, addMarketComment);
 router.get("/market-comment/:id", mListMarketComment, listMarketComment);
+router.patch("/market-comment/:id", mEditMarketComment, editMarketComment);
 
 module.exports = router;
